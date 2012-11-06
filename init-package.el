@@ -22,6 +22,7 @@
 			  htmlize
 			  ido-ubiquitous
 			  magit
+                          psvn
 			  idle-highlight-mode
                           markdown-mode)
   "A list of packages ensured to be installed at launch.")

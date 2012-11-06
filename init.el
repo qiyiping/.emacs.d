@@ -13,4 +13,7 @@
 (require 'init-ido)
 (require 'init-isearch)
 (require 'init-general-editing)
+(require 'init-programming)
+(require 'init-vc)
+(require 'init-cc)
 (require 'init-markdown)

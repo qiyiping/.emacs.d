@@ -20,6 +20,7 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (setq fill-column 80)
 
+;; Backup file by copying to specified place
 (setq backup-by-copying t)
 (setq backup-directory-alist '((".*" . "~/.emacs.d/backup/")))
 
@@ -43,5 +44,10 @@
         try-expand-dabbrev
         try-expand-dabbrev-all-buffers
         try-expand-dabbrev-from-kill))
+
+;; Save visit place of previously visited files
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
 
 (provide 'init-general-editing)

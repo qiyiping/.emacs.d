@@ -1,6 +1,7 @@
-elpa
-auto-save-list
+elpa/
+auto-save-list/
 url/
 backup/
-
 /ac-comphist.dat
+*.elc
+/saved-places
