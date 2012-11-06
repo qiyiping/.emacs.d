@@ -17,4 +17,6 @@
 
 (add-hook 'prog-mode-hook 'idle-highlight-mode)
 
+(require 'thrift-mode)
+
 (provide 'init-programming)

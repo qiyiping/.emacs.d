@@ -16,4 +16,5 @@
 (require 'init-programming)
 (require 'init-vc)
 (require 'init-cc)
+(require 'init-python)
 (require 'init-markdown)
