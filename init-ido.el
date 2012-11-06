@@ -1,5 +1,12 @@
 ;;; init-ido.el --- ido mode settings
 
+;; ido mode key bindings:
+;; // - go to the root directory.
+;; ~/ - go to the home directory.
+;; C-f - to go back temporarily to the normal find-file.
+;; C-d - enter Dired for this directory (used to be C-x C-d in older versions)
+;; C-j - create a new file named with the text you entered
+;; while using `c-x c-f' to open file, use `c-x d' to open dir
 (ido-mode t)
 (ido-ubiquitous t)
 

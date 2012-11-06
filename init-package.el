@@ -22,7 +22,8 @@
 			  htmlize
 			  ido-ubiquitous
 			  magit
-			  idle-highlight-mode)
+			  idle-highlight-mode
+                          markdown-mode)
   "A list of packages ensured to be installed at launch.")
 
 (dolist (p my-package-list)
