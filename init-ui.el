@@ -12,24 +12,14 @@
   (blink-cursor-mode -1)
   (setq x-select-enable-clipboard t))
 
-(global-font-lock-mode t)
-
+;; supress gui startup message
 (setq inhibit-startup-message t)
-(setq query-replace-highlight t)
+(setq inhibit-startup-echo-area-message t)
 
-(show-paren-mode t)
-(setq show-paren-style 'parenthesis)
-
-(transient-mark-mode t)
-
+;; show date/time in mode line
 (display-time)
 (setq display-time-day-and-date t)
-
 (column-number-mode t)
-
-;; Uniquify buffer name display
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;; Set background/foreground mannually
 ;; Use `list-color-display' to show available colors

@@ -15,6 +15,8 @@
 			  google-c-style
 			  quack
 			  gtags
+			  auctex
+			  autopair
 			  paredit
 			  smex
 			  htmlize

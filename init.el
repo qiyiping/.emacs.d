@@ -9,3 +9,5 @@
 (require 'init-yasnippet)
 (require 'init-ibuffer)
 (require 'init-shell)
+(require 'init-ido)
+(require 'init-general-editing)
