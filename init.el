@@ -3,6 +3,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 
 ;; package settings
-(require 'package-settings)
-(require 'auto-complete-settings)
-(require 'yasnippet-settings)
+(require 'init-package)
+(require 'init-auto-complete)
+(require 'init-yasnippet)

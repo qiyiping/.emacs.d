@@ -6,4 +6,4 @@
 			     yas/ido-prompt
 			     yas/completing-prompt))
 
-(provide 'yasnippet-settings)
+(provide 'init-yasnippet)
