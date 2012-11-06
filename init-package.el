@@ -17,6 +17,7 @@
 			  gtags
 			  paredit
 			  smex
+			  htmlize
 			  ido-ubiquitous
 			  magit
 			  idle-highlight-mode)

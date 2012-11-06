@@ -4,5 +4,8 @@
 
 ;; package settings
 (require 'init-package)
+(require 'init-ui)
 (require 'init-auto-complete)
 (require 'init-yasnippet)
+(require 'init-ibuffer)
+(require 'init-shell)
