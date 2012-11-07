@@ -10,4 +10,7 @@
                     "/usr/texbin"
                     "/usr/X11/bin")))
 
+(when (eq system-type 'windows-nt)
+  (add-to-list 'exec-path "c:/Program Files (x86)/Git/bin/"))
+
 (provide 'init-exec-path)

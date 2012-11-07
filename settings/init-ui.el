@@ -45,7 +45,10 @@
   (interactive "nOpaque degree 0 - 100:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-(if window-system
-    (transparency 93))
+(when window-system
+  (transparency 93)
+  ;; Set font size
+  ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
+  (set-face-attribute 'default nil :height 120))
 
 (provide 'init-ui)
