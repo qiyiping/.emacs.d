@@ -21,4 +21,6 @@
 (smex-initialize)
 (global-set-key "\M-x" 'smex)
 
+;; (recentf-mode t)
+
 (provide 'init-ido)
