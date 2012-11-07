@@ -50,4 +50,6 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+(put 'dired-find-alternate-file 'disabled nil)
+
 (provide 'init-general-editing)

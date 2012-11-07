@@ -7,7 +7,7 @@
     (erase-buffer)))
 
 (add-hook 'eshell-mode-hook '(lambda ()
-			       (local-set-key (kbd "C-c C-l") 'eshell-clear)))
+			       (local-set-key (kbd "C-l") 'eshell-clear)))
 
 (defun shell-clear ()
   (interactive)

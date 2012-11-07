@@ -26,6 +26,9 @@
 
 (add-hook 'c-mode-common-hook 'my-c-mode-hs-settings)
 
+(add-hook 'c-mode-common-hook '(lambda ()
+                                 (gtags-mode t)))
+
 ;; some useful keybindings in cc-mode:
 ;; C-M-h (c-mark-function)
 ;; C-c C-c (comment-region)

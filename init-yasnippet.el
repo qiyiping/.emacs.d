@@ -1,5 +1,5 @@
 (require 'yasnippet)
-(yas--initialize)
+(yas-global-mode t)
 
 ;; remove the annoying yas/x-prompt
 (setq yas/prompt-functions '(yas/dropdown-prompt

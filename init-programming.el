@@ -15,8 +15,10 @@
   (indent-region (point-min) (point-max))
   (delete-trailing-whitespace))
 
-(add-hook 'prog-mode-hook 'idle-highlight-mode)
+(when (> emacs-major-version 23)
+  (add-hook 'prog-mode-hook 'idle-highlight-mode))
 
 (require 'thrift-mode)
+(require 'protobuf-mode)
 
 (provide 'init-programming)

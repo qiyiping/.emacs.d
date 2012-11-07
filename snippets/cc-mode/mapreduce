@@ -1,0 +1,35 @@
+#name : jikemapreduce ... { ... }
+# --
+#include "infrastructure/mapreduce/public/mapred.h"
+#include "indexing/pipeline/base/partitioner.h"
+#include "base/yr.h"
+#include "base/hash.h"
+#include "base/string_util.h"
+
+using mapreduce::BasicMapper;
+using mapreduce::BasicReducer;
+
+class ${1:Mapper}: public BasicMapper {
+public:
+    ${1:$(yas/substr text "[^: ]*")}() {}
+    virtual ~${1:$(yas/substr text "[^: ]*")}() {}
+    virtual void OnCreate(mapreduce::TaskContext* context) {}
+    virtual void Map(mapreduce::MapContext* context) {}
+private:
+};
+
+class ${2:Reducer}: public BasicReducer {
+public:
+    ${2:$(yas/substr text "[^: ]*")}() {}
+    virtual ~${2:$(yas/substr text "[^: ]*")}() {}
+    virtual void OnCreate(mapreduce::TaskContext* context) {}
+    virtual void Reduce(mapreduce::ReduceContext* context) {}
+private:
+};
+
+REGIST_MAP_RED_PAR(${1:$(yas/substr text "[^: ]*")},
+${2:$(yas/substr text "[^: ]*")},
+indexing::pipeline::ShardingPartitioner)
+
+REGIST_MAP_RED(${1:$(yas/substr text "[^: ]*")},
+${2:$(yas/substr text "[^: ]*")})
