@@ -46,7 +46,7 @@
                 "~/Projects/jike/coding/.ymake-out/opt/thrift-out/"
                 "~/Projects/jike/coding/.ymake-out/dbg/thrift-out/"))
 
-(add-hook c-mode-common-hook '(lambda ()
-                       (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
+(add-hook 'c-mode-common-hook '(lambda ()
+                                 (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
 
 (provide 'init-cc)

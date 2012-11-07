@@ -15,6 +15,8 @@
   (indent-region (point-min) (point-max))
   (delete-trailing-whitespace))
 
+(global-set-key (kbd "C-c C") 'programming-cleanup-buffer)
+
 (defvar programming-mode-hooks '(c-mode-common-hook
                                  python-mode-hook
                                  perl-mode-hook
