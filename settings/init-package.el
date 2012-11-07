@@ -1,4 +1,4 @@
-;;; set up the package manager
+;;; init-package.el --- set up the package manager
 
 (require 'package)
 

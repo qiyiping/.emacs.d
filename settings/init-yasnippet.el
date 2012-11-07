@@ -1,3 +1,4 @@
+;;; init-yasnippet.el -- yasnippet settings
 (require 'yasnippet)
 (yas-global-mode t)
 
