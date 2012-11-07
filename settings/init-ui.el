@@ -17,8 +17,9 @@
 (setq inhibit-startup-echo-area-message t)
 
 ;; show date/time in mode line
-(display-time)
 (setq display-time-day-and-date t)
+(display-time)
+
 (column-number-mode t)
 
 ;; Set background/foreground mannually
