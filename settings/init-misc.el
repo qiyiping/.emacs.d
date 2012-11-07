@@ -26,4 +26,15 @@
 (setq cal-china-x-priority1-holidays cal-china-x-chinese-holidays)
 (setq calendar-holidays cal-china-x-priority1-holidays)
 
+;; tramp
+(require 'tramp)
+(setq tramp-default-method "ssh")
+
+;; (server-start)
+(defun kill-emacs-server ()
+  "Save buffers and kill emacs server"
+  (interactive)
+  (save-some-buffers)
+  (kill-emacs))
+
 (provide 'init-misc)
