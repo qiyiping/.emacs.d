@@ -28,6 +28,9 @@
   (dolist (mode-hook programming-mode-hooks)
     (add-hook mode-hook 'idle-highlight-mode)))
 
+(setq-default imenu-auto-rescan t)
+(global-set-key (kbd "C-x C-i") 'imenu)
+
 (require 'thrift-mode)
 (require 'protobuf-mode)
 
