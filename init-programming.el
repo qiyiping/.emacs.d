@@ -15,8 +15,23 @@
   (indent-region (point-min) (point-max))
   (delete-trailing-whitespace))
 
-(when (> emacs-major-version 23)
-  (add-hook 'prog-mode-hook 'idle-highlight-mode))
+(defvar programming-mode-hooks '(c-mode-common-hook
+                                 python-mode-hook
+                                 perl-mode-hook
+                                 emacs-lisp-mode-hook
+                                 scheme-mode-hook
+                                 sh-mode-hook)
+  "Programming mode hook")
+
+(if (> emacs-major-version 23)
+    (progn
+      (add-hook 'prog-mode-hook 'idle-highlight-mode)
+      (add-hook 'prog-mode-hook '(lambda ()
+                                   (local-set-key (kbd "C-x C-o") 'ff-find-other-file))))
+  (dolist (mode-hook programming-mode-hooks)
+    (add-hook mode-hook 'idle-highlight-mode)
+    (add-hook mode-hook '(lambda ()
+                           (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))))
 
 (require 'thrift-mode)
 (require 'protobuf-mode)
