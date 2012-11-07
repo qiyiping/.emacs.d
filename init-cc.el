@@ -35,4 +35,18 @@
 ;; C-M-a (c-beginning-of-defun)
 ;; C-M-e (c-end-of-defun)
 
+;; Specify ff search directories
+(setq-default ff-search-directories
+              '("."
+                "/usr/local/include/"
+                "/usr/include/c++/4.4/"
+                "/usr/include/sys/"
+                "/usr/include/"
+                "~/Projects/jike/coding/"
+                "~/Projects/jike/coding/.ymake-out/opt/thrift-out/"
+                "~/Projects/jike/coding/.ymake-out/dbg/thrift-out/"))
+
+(add-hook c-mode-common-hook '(lambda ()
+                       (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
+
 (provide 'init-cc)

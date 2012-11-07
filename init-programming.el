@@ -23,26 +23,10 @@
                                  sh-mode-hook)
   "Programming mode hook")
 
-;; Specify ff search directories
-(setq-default ff-search-directories
-              '("."
-                "/usr/local/include/"
-                "/usr/include/c++/4.4/"
-                "/usr/include/sys/"
-                "/usr/include/"
-                "~/Projects/jike/coding/"
-                "~/Projects/jike/coding/.ymake-out/opt/thrift-out/"
-                "~/Projects/jike/coding/.ymake-out/dbg/thrift-out/"))
-
 (if (> emacs-major-version 23)
-    (progn
-      (add-hook 'prog-mode-hook 'idle-highlight-mode)
-      (add-hook 'prog-mode-hook '(lambda ()
-                                   (local-set-key (kbd "C-x C-o") 'ff-find-other-file))))
+    (add-hook 'prog-mode-hook 'idle-highlight-mode)
   (dolist (mode-hook programming-mode-hooks)
-    (add-hook mode-hook 'idle-highlight-mode)
-    (add-hook mode-hook '(lambda ()
-                           (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))))
+    (add-hook mode-hook 'idle-highlight-mode)))
 
 (require 'thrift-mode)
 (require 'protobuf-mode)
