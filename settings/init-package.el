@@ -14,7 +14,7 @@
 			  yasnippet
 			  google-c-style
 			  quack
-			  gtags
+			  ;; gtags
 			  auctex
                           quack
 			  autopair

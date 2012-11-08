@@ -5,3 +5,4 @@ backup/
 /ac-comphist.dat
 *.elc
 /saved-places
+/tramp
