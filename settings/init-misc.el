@@ -40,4 +40,8 @@
 
 (global-set-key [f12] 'browse-url-at-point)
 
+;; Use M-SPC in windows to set mark
+(when (eq system-type 'windows-nt)
+  (global-set-key (kbd "M-SPC") 'set-mark-command))
+
 (provide 'init-misc)
