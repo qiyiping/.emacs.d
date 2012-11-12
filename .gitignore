@@ -6,3 +6,4 @@ backup/
 *.elc
 /saved-places
 /tramp
+/places
