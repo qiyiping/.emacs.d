@@ -26,10 +26,15 @@
                                  sh-mode-hook)
   "Programming mode hook")
 
+(defun programming-common-settings ()
+  (setq indent-tabs-mode nil)
+  (setq show-trailing-whitespace t )
+  (idle-highlight-mode t))
+
 (if (> emacs-major-version 23)
-    (add-hook 'prog-mode-hook 'idle-highlight-mode)
+    (add-hook 'prog-mode-hook 'programming-common-settings)
   (dolist (mode-hook programming-mode-hooks)
-    (add-hook mode-hook 'idle-highlight-mode)))
+    (add-hook mode-hook 'programming-common-settings)))
 
 (setq-default imenu-auto-rescan t)
 (global-set-key (kbd "C-x C-i") 'imenu)
