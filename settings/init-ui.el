@@ -49,6 +49,6 @@
   (transparency 93)
   ;; Set font size
   ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
-  (set-face-attribute 'default nil :height 120))
+  (set-face-attribute 'default nil :height 130))
 
 (provide 'init-ui)
