@@ -26,9 +26,6 @@
 
 (setq bookmark-default-file "~/.emacs.d/.bookmarks.el")
 
-(setq-default indent-tabs-mode nil
-	      show-trailing-whitespace t )
-
 (setq-default  ediff-split-window-function 'split-window-horizontally
 	       ediff-window-setup-function 'ediff-setup-windows-plain)
 
