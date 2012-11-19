@@ -1,10 +1,10 @@
 .emacs.d
 ==========
-My Emacs Configuration
+my emacs configurations
 
 init.el
 ----------
-`init.el` will do two task:
+`init.el` will do two tasks:
   * setup `load-path`
   * load my personal settings
 
