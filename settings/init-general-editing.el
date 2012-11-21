@@ -49,4 +49,9 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
+(defun delete-all-blank-lines ()
+  "Delete all blank line by calling `delete-matching-lines'"
+  (interactive)
+  (delete-matching-lines "^[ \t]*$"))
+
 (provide 'init-general-editing)
