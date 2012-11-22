@@ -35,16 +35,31 @@
 ;; C-M-a (c-beginning-of-defun)
 ;; C-M-e (c-end-of-defun)
 
-;; Specify ff search directories
-(setq-default ff-search-directories
-              '("."
-                "/usr/local/include/"
-                "/usr/include/c++/4.4/"
-                "/usr/include/sys/"
-                "/usr/include/"
-                "~/Projects/jike/coding/"
-                "~/Projects/jike/coding/.ymake-out/opt/thrift-out/"
-                "~/Projects/jike/coding/.ymake-out/dbg/thrift-out/"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; cc search directory
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar search-directories-file
+  "~/.emacs.d/search-directories.el")
+
+(defun save-search-directories ()
+  "Save `cc-search-directories' in `search-directories-file'"
+  (let ((coding-system-for-write 'utf-8))
+    (write-region
+     (concat ";; Set `cc-search-directories' which will be used by `ff-search-directories'\n"
+             "(setq cc-search-directories '"
+             (prin1-to-string cc-search-directories)
+             ")\n")
+     nil
+     search-directories-file
+     nil
+     'silent)))
+
+(defun add-search-directories (search-dir)
+  (interactive "DSearch Directory: ")
+  (add-to-list 'cc-search-directories search-dir)
+  (save-search-directories))
+
+(add-hook 'after-init-hook (lambda () (load search-directories-file)))
 
 (add-hook 'c-mode-common-hook '(lambda ()
                                  (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
