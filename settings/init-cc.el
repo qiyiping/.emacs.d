@@ -59,7 +59,7 @@
   (add-to-list 'cc-search-directories search-dir)
   (save-search-directories))
 
-(add-hook 'after-init-hook (lambda () (load search-directories-file)))
+(add-hook 'after-init-hook (lambda () (load search-directories-file t)))
 
 (add-hook 'c-mode-common-hook '(lambda ()
                                  (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
