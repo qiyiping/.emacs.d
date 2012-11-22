@@ -49,9 +49,24 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Some handy edit toolkit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun delete-all-blank-lines ()
   "Delete all blank line by calling `delete-matching-lines'"
   (interactive)
   (delete-matching-lines "^[ \t]*$"))
+
+(defun copy-symbol-at-point ()
+  (interactive)
+  (let ((symbol (symbol-at-point)))
+    (if symbol (kill-new (symbol-name symbol)))))
+
+(defun copy-line ()
+  (interactive)
+  (kill-ring-save (line-beginning-position) (line-end-position)))
+
+(global-set-key (kbd "C-c W") 'copy-symbol-at-point)
+(global-set-key (kbd "C-c K") 'copy-line)
 
 (provide 'init-general-editing)
