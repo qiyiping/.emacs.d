@@ -1,4 +1,5 @@
-#name : jikemapreduce ... { ... }
+# name : jikemapreduce ... { ... }
+# key : mapreduce
 # --
 #include "infrastructure/mapreduce/public/mapred.h"
 #include "indexing/pipeline/base/partitioner.h"
