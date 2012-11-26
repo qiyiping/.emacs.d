@@ -48,6 +48,7 @@
 (setq save-place-file "~/.emacs.d/saved-places")
 
 (put 'dired-find-alternate-file 'disabled nil)
+(setq dired-dwim-target t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some handy edit toolkit
