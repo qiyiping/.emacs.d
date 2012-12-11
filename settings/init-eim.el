@@ -9,10 +9,10 @@
 
 (register-input-method
  "eim-wb" "euc-cn" 'eim-use-package
- "Îå±Ê" "ºº×ÖÎå±ÊÊäÈë·¨" "wb.txt")
+ "äº”ç¬”" "æ±‰å­—äº”ç¬”è¾“å…¥æ³•" "wb.txt")
 (register-input-method
  "eim-py" "euc-cn" 'eim-use-package
- "Æ´Òô" "ºº×ÖÆ´ÒôÊäÈë·¨" "py.txt")
+ "æ‹¼éŸ³" "æ±‰å­—æ‹¼éŸ³è¾“å…¥æ³•" "py.txt")
 
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
