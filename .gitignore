@@ -8,3 +8,4 @@ backup/
 /tramp
 /places
 /search-directories.el
+/eshell/
