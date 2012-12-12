@@ -37,7 +37,27 @@
     (add-hook mode-hook 'programming-common-settings)))
 
 (setq-default imenu-auto-rescan t)
-(global-set-key (kbd "C-x C-i") 'imenu)
+;; jump stack for imenu
+(defvar programming-imenu-positions
+  '()
+  "imenu jump stack")
+
+(defun programming-imenu-jump ()
+  (interactive)
+  (let ((pos (point)))
+    (unless (eq (car programming-imenu-positions) pos)
+      (push pos programming-imenu-positions)))
+  (call-interactively 'imenu))
+
+(defun programming-imenu-jump-back ()
+  (interactive)
+  (let ((pos (pop programming-imenu-positions)))
+    (if pos
+        (goto-char pos)
+      (message "imenu jump stack is empty"))))
+
+(global-set-key (kbd "C-x C-i") 'programming-imenu-jump)
+(global-set-key (kbd "C-c C-i") 'programming-imenu-jump-back)
 
 (require 'thrift-mode)
 (require 'protobuf-mode)
