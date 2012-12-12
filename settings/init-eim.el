@@ -4,9 +4,6 @@
 
 (autoload 'eim-use-package "eim" "Another emacs input method")
 
-(setq eim-use-tooltip nil)
-(setq eim-wb-use-gbk t)
-
 (register-input-method
  "eim-wb" "euc-cn" 'eim-use-package
  "五笔" "汉字五笔输入法" "wb.txt")
@@ -16,6 +13,12 @@
 
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
+
+(setq eim-use-tooltip nil)
+(setq eim-wb-use-gbk t)
+
+(setq eim-wb-history-file "~/.emacs.d/eim-wb-history")
+(setq eim-wb-user-file "~/.emacs.d/eim-wb-user")
 
 (setq default-input-method 'eim-py)
 ;; (setq default-input-method 'eim-wb)
