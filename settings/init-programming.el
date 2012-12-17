@@ -56,8 +56,8 @@
         (goto-char pos)
       (message "imenu jump stack is empty"))))
 
-(global-set-key (kbd "C-x C-i") 'programming-imenu-jump)
-(global-set-key (kbd "C-c C-i") 'programming-imenu-jump-back)
+(global-set-key (kbd "C-x i") 'programming-imenu-jump)
+(global-set-key (kbd "C-x p") 'programming-imenu-jump-back)
 
 (require 'thrift-mode)
 (require 'protobuf-mode)
