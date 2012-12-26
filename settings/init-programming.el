@@ -36,8 +36,8 @@
   (dolist (mode-hook programming-mode-hooks)
     (add-hook mode-hook 'programming-common-settings)))
 
+;; imenu settings
 (setq-default imenu-auto-rescan t)
-;; jump stack for imenu
 (defvar programming-imenu-positions
   '()
   "imenu jump stack")
@@ -59,6 +59,18 @@
 (global-set-key (kbd "C-x i") 'programming-imenu-jump)
 (global-set-key (kbd "C-x p") 'programming-imenu-jump-back)
 
+;; json pretty printing
+(defun pretty-json ()
+  (interactive)
+  (if (/= 0
+          (shell-command-on-region (region-beginning)
+                                   (region-end)
+                                   "python ~/.emacs.d/settings/json_pretty.py"
+                                   (current-buffer)
+                                   t))
+      (message "failed to parse the region")))
+
+;; other useful programming modes
 (require 'thrift-mode)
 (require 'protobuf-mode)
 (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
