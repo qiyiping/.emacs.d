@@ -47,6 +47,7 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;; dired mode
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-dwim-target t)
 
