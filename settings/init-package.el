@@ -24,7 +24,8 @@
 			  ido-ubiquitous
 			  magit
 			  idle-highlight-mode
-                          markdown-mode)
+                          markdown-mode
+                          lua-mode)
   "A list of packages ensured to be installed at launch.")
 
 (dolist (p my-package-list)

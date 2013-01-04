@@ -20,6 +20,7 @@
 (require 'init-cc)
 (require 'init-python)
 (require 'init-scheme)
+(require 'init-lua)
 (require 'init-auctex)
 (require 'init-org)
 (require 'init-markdown)
