@@ -24,6 +24,10 @@
 (setq backup-by-copying t)
 (setq backup-directory-alist '((".*" . "~/.emacs.d/backup/")))
 
+;; Bookmark keybindings
+;; ctrl-x-r-m -> bookmark-set
+;; ctrl-x-r-b -> bookmark-jump
+;; ctrl-x-r-l -> bookmark-list
 (setq bookmark-default-file "~/.emacs.d/.bookmarks.el")
 
 (setq-default  ediff-split-window-function 'split-window-horizontally
@@ -70,5 +74,8 @@
 
 (global-set-key (kbd "C-c W") 'copy-symbol-at-point)
 (global-set-key (kbd "C-c K") 'copy-line)
+(global-set-key (kbd "C-c J") (lambda ()
+                                (interactive)
+                                (join-line -1)))
 
 (provide 'init-general-editing)

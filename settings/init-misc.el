@@ -11,6 +11,32 @@
 (windmove-default-keybindings 'meta)
 (setq windmove-wrap-around t)
 
+;; rotate windows
+;; http://whattheemacsd.com/
+(defun rotate-windows ()
+  "Rotate windows"
+  (interactive)
+  (cond ((not (> (count-windows) 1))
+         (message "You can't rotate a single window!"))
+        (t
+         (setq i 1)
+         (setq n (count-windows))
+         (while (< i n)
+           (let* ((w1 (elt (window-list) i))
+                  (w2 (elt (window-list) (+ (% i n) 1)))
+
+                  (b1 (window-buffer w1))
+                  (b2 (window-buffer w2))
+
+                  (s1 (window-start w1))
+                  (s2 (window-start w2)))
+             (set-window-buffer w1  b2)
+             (set-window-buffer w2 b1)
+             (set-window-start w1 s2)
+             (set-window-start w2 s1)
+             (setq i (1+ i)))))))
+(global-set-key (kbd "M-r") 'rotate-windows)
+
 ;; window resize key bindings
 ;; `enlarge-window': C-x ^
 ;; `enlarge-window-horizontally': C-x }
@@ -32,6 +58,7 @@
 
 ;; Allow Emacs to be a server for client processes
 ;; (server-start)
+
 (defun kill-emacs-server ()
   "Save buffers and kill emacs server"
   (interactive)
