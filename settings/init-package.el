@@ -25,6 +25,7 @@
 			  magit
 			  idle-highlight-mode
                           markdown-mode
+                          zencoding-mode
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
