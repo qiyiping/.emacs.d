@@ -35,7 +35,7 @@
              (set-window-start w1 s2)
              (set-window-start w2 s1)
              (setq i (1+ i)))))))
-(global-set-key (kbd "M-r") 'rotate-windows)
+(global-set-key (kbd "M-R") 'rotate-windows)
 
 ;; window resize key bindings
 ;; `enlarge-window': C-x ^
