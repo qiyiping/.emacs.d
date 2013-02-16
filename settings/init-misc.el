@@ -71,4 +71,11 @@
 (when (eq system-type 'windows-nt)
   (global-set-key (kbd "M-SPC") 'set-mark-command))
 
+;; sudo edit
+(defun sudo-edit ()
+  (interactive)
+  (if (buffer-file-name)
+      (find-alternate-file (concat "/sudo::" (buffer-file-name)))
+    (find-file (concat "/sudo::" (ido-read-file-name "File: ")))))
+
 (provide 'init-misc)
