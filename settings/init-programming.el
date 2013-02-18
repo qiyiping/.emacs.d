@@ -3,6 +3,10 @@
 (global-set-key (kbd "C-c M") 'comment-region)
 (global-set-key [f7] 'compile)
 
+;; smart-compile+ package
+;; smart-compile & smart-run
+(require 'smart-compile+)
+
 (setq gdb-many-windows t)
 (which-function-mode t)
 
