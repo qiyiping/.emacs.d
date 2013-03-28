@@ -18,6 +18,7 @@
 (require 'init-programming)
 (require 'init-vc)
 (require 'init-cc)
+(require 'init-csharp)
 (require 'init-python)
 (require 'init-scheme)
 (require 'init-lua)

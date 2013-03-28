@@ -26,6 +26,7 @@
 			  idle-highlight-mode
                           markdown-mode
                           zencoding-mode
+                          csharp-mode
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
