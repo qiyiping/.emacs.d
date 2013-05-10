@@ -20,7 +20,7 @@
 (require 'init-cc)
 (require 'init-csharp)
 (require 'init-python)
-(require 'init-scheme)
+(require 'init-lisp)
 (require 'init-lua)
 (require 'init-auctex)
 (require 'init-org)
