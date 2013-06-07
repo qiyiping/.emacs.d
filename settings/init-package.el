@@ -15,7 +15,6 @@
 			  quack
 			  ;; gtags
 			  auctex
-                          quack
 			  autopair
 			  paredit
 			  smex
