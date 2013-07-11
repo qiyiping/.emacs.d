@@ -1,7 +1,7 @@
 ;;; init-scheme.el --- lisp/scheme settings
 
-(require 'quack)
-(setq scheme-program-name "mzscheme")
+;; (require 'quack)
+;; (setq scheme-program-name "mzscheme")
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)

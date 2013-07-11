@@ -8,11 +8,10 @@
   (c-toggle-hungry-state t)
   (c-toggle-auto-newline -1)
   (setq indent-tabs-mode nil)
-  (google-set-c-style)
+  (google-set-c-style))
   ;; (c-set-style "stroustrup")
   ;; (setq c-basic-offset 4)
   ;; (setq tab-width 4))
-  )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-settings)
 

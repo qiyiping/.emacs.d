@@ -21,6 +21,9 @@
 			       (name . "^\\*R\\*$")
 			       (filename . ".*[Mm]akefile")
 			       (mode . makefile-mode)))
+               ("IDL" (or
+                       (mode . protobuf-mode)
+                       (mode . thrift-mode)))
 	       ("Dired" (mode . dired-mode))
 	       ("Emacs" (or
 			 (name . "^\\*scratch\\*$")
