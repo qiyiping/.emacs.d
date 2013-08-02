@@ -12,7 +12,7 @@
 (defvar my-package-list '(auto-complete
 			  yasnippet
 			  google-c-style
-			  quack
+			  ;; quack
 			  ;; gtags
 			  auctex
 			  autopair

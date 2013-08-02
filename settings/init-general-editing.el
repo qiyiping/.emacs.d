@@ -56,6 +56,8 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-dwim-target t)
 
+(setq dired-listing-switches "-lh")
+
 (defun open-file-externally (file-name)
   (cond
    ((eq system-type 'windows-nt)
