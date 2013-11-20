@@ -8,7 +8,8 @@
                     "/sbin"
                     "/usr/local/bin"
                     "/usr/texbin"
-                    "/usr/X11/bin")))
+                    "/usr/X11/bin"))
+  (setenv "LC_CTYPE" "UTF-8"))
 
 (when (eq system-type 'windows-nt)
   (add-to-list 'exec-path "c:/Program Files (x86)/Git/bin/")
