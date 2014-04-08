@@ -4,7 +4,7 @@
 ;; ;; Use the master branch in emacs24 and the emacs23 branch in emacs23
 ;; (require 'python)
 
-(add-hook 'python-mode-hook 'jedi:setup)
+;; (add-hook 'python-mode-hook 'jedi:setup)
 
 (add-to-list 'auto-mode-alist '("SConstruct\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("YBUILD\\'" . python-mode))
