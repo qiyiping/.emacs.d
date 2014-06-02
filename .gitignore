@@ -9,3 +9,4 @@ backup/
 /places
 /search-directories.el
 /eshell/
+.python-environments
