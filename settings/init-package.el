@@ -25,7 +25,8 @@
                           markdown-mode
                           zencoding-mode
                           csharp-mode
-                          jedi
+                          ;; jedi
+                          auto-complete-clang
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
