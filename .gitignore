@@ -10,4 +10,4 @@ backup/
 /search-directories.el
 /eshell/
 .bookmarks.el
-.python-environments/
+.python-environments
