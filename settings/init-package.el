@@ -26,6 +26,7 @@
                           zencoding-mode
                           csharp-mode
                           jedi
+			  scala-mode2
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
