@@ -75,6 +75,7 @@
     (dired-find-file)))
 (define-key dired-mode-map "\r" 'my-dired-find-file)
 
+(require 'dirtree)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some handy edit toolkit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

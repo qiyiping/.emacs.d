@@ -27,6 +27,9 @@
                           csharp-mode
                           ;; jedi
                           auto-complete-clang
+                          scala-mode2
+                          sbt-mode
+                          dirtree
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
