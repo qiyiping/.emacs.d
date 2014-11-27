@@ -17,6 +17,7 @@
 			       (mode . emacs-lisp-mode)
 			       (mode . inferior-ess-mode)
 			       (mode . sh-mode)
+                               (mode . scala-mode)
 			       (mode . java-mode)
 			       (name . "^\\*R\\*$")
 			       (filename . ".*[Mm]akefile")
