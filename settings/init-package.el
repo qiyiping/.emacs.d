@@ -15,6 +15,7 @@
 			  ;; quack
 			  ;; gtags
 			  auctex
+                          ace-jump-mode
 			  autopair
 			  paredit
 			  smex

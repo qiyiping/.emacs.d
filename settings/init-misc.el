@@ -37,6 +37,14 @@
              (setq i (1+ i)))))))
 (global-set-key (kbd "M-R") 'rotate-windows)
 
+;; ace jump mode
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+
+
 ;; window resize key bindings
 ;; `enlarge-window': C-x ^
 ;; `enlarge-window-horizontally': C-x }
