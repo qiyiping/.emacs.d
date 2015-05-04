@@ -30,6 +30,7 @@
 ;; alias e="emacs -bg color-253 -fg color-236 -cr color-27"
 ;; For window system:
 (when window-system
+  (nyan-mode)
   (set-background-color "grey31")
   (set-foreground-color "grey91")
   (set-cursor-color "steelblue"))

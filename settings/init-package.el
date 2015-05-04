@@ -14,6 +14,8 @@
 			  google-c-style
 			  ;; quack
 			  ;; gtags
+                          helm
+                          nyan-mode
 			  auctex
                           ace-jump-mode
 			  autopair
