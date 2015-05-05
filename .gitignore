@@ -11,3 +11,4 @@ backup/
 /eshell/
 .bookmarks.el
 .python-environments
+/projectile-bookmarks.eld

@@ -15,6 +15,7 @@
 			  ;; quack
 			  ;; gtags
                           helm
+                          helm-projectile
                           nyan-mode
 			  auctex
                           ace-jump-mode

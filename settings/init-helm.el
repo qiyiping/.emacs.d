@@ -35,6 +35,12 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
+(define-key shell-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
+
 (helm-mode 1)
+
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
 
 (provide 'init-helm)
