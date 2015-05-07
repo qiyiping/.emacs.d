@@ -28,6 +28,7 @@
 			  idle-highlight-mode
                           markdown-mode
                           zencoding-mode
+                          exec-path-from-shell
                           csharp-mode
                           ;; jedi
                           auto-complete-clang
