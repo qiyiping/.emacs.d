@@ -73,7 +73,7 @@
   (save-some-buffers)
   (kill-emacs))
 
-(global-set-key [f12] 'browse-url-at-point)
+(global-set-key [f8] 'browse-url-at-point)
 
 ;; Use M-SPC in windows to set mark
 (when (eq system-type 'windows-nt)
