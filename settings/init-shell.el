@@ -19,4 +19,14 @@
 (add-hook 'shell-mode-hook '(lambda ()
 			      (local-set-key (kbd "C-l") 'shell-clear)))
 
+;;; multi-term
+(setq multi-term-program "/bin/bash")
+
+(add-hook 'term-mode-hook
+          (lambda ()
+            (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
+            (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
+
+(global-set-key (kbd "C-c C-t") 'multi-term)
+
 (provide 'init-shell)
