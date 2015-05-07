@@ -29,6 +29,7 @@
                           markdown-mode
                           zencoding-mode
                           exec-path-from-shell
+                          multi-term
                           csharp-mode
                           ;; jedi
                           auto-complete-clang
