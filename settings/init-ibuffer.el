@@ -8,6 +8,10 @@
 		       (mode . org-mode)
 		       (name . "^\\*Calendar\\*$")
 		       (name . "^diary$")))
+               ("Shell" (or
+                         (mode . shell-mode)
+                         (mode . term-mode)
+                         (mode . inferior-python-mode)))
 	       ("Programming" (or
 			       (mode . c-mode)
 			       (mode . c++-mode)
