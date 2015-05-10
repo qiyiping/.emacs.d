@@ -36,6 +36,7 @@
                           scala-mode2
                           sbt-mode
                           dirtree
+                          web-mode
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 

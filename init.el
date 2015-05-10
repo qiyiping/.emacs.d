@@ -28,6 +28,7 @@
 (require 'init-markdown)
 (require 'init-eim)
 (require 'init-xml)
+(require 'init-web)
 (require 'init-scala)
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
