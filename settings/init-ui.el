@@ -39,12 +39,16 @@
 (when window-system
   (nyan-mode))
 
+(require 'color-theme)
 (color-theme-solarized)
 ;; Highlight current line
+;; (when (> (display-color-cells) 8)
+;;   (global-hl-line-mode t)
+;;   (if window-system
+;;       (set-face-background 'hl-line "DarkOliveGreen")))
+
 (when (> (display-color-cells) 8)
-  (global-hl-line-mode t)
-  (if window-system
-      (set-face-background 'hl-line "DarkOliveGreen")))
+  (global-hl-line-mode t))
 
 ;; Make emacs frame transparent
 (defun transparency (value)
