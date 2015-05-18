@@ -40,8 +40,9 @@
   (nyan-mode))
 
 (require 'color-theme)
-(setq frame-background-mode 'dark)
-(load-theme 'solarized t)
+;; (load-theme 'solarized t)
+(color-theme-solarized)
+
 
 ;; Highlight current line
 ;; (when (> (display-color-cells) 8)
