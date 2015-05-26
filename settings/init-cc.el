@@ -26,7 +26,7 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-hs-settings)
 
 (add-hook 'c-mode-common-hook '(lambda ()
-                                 (gtags-mode t)))
+                                 (ggtags-mode 1)))
 
 ;; some useful keybindings in cc-mode:
 ;; C-M-h (c-mark-function)

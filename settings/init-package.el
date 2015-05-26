@@ -38,6 +38,7 @@
                           dirtree
                           web-mode
                           color-theme-solarized
+                          ggtags
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
