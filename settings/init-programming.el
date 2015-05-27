@@ -10,8 +10,6 @@
 (setq gdb-many-windows t)
 (which-function-mode t)
 
-;; (setq gtags-suggested-key-mapping t)
-(require 'gtags)
 (require 'xcscope)
 
 (defun programming-cleanup-buffer ()
