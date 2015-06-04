@@ -12,8 +12,6 @@
 (defvar my-package-list '(auto-complete
 			  yasnippet
 			  google-c-style
-			  ;; quack
-			  ;; gtags
                           helm
                           helm-projectile
                           nyan-mode
@@ -31,7 +29,6 @@
                           exec-path-from-shell
                           multi-term
                           csharp-mode
-                          ;; jedi
                           auto-complete-clang
                           scala-mode2
                           sbt-mode
@@ -39,6 +36,7 @@
                           web-mode
                           color-theme-solarized
                           ggtags
+                          ein
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
