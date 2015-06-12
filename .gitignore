@@ -12,3 +12,4 @@ backup/
 .bookmarks.el
 .python-environments
 /projectile-bookmarks.eld
+/request/
