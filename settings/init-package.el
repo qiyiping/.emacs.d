@@ -36,6 +36,7 @@
                           web-mode
                           color-theme-solarized
                           ggtags
+                          dictionary
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 

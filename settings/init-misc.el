@@ -60,6 +60,9 @@
 (setq cal-china-x-priority1-holidays cal-china-x-chinese-holidays)
 (setq calendar-holidays cal-china-x-priority1-holidays)
 
+;; Dictionary
+(global-set-key (kbd "C-c d") 'dictionary-lookup-definition)
+
 ;; Tramp
 (require 'tramp)
 (setq tramp-default-method "ssh")
