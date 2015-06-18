@@ -62,6 +62,7 @@
 
 ;; Dictionary
 (global-set-key (kbd "C-c d") 'dictionary-lookup-definition)
+(setq dictionary-default-dictionary "wn")
 
 ;; Tramp
 (require 'tramp)
