@@ -1,5 +1,8 @@
 ;;; init-misc.el --- goodies
 
+
+;; ================= move & locate =================
+
 ;; Revert buffer w/o confirm
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
@@ -44,6 +47,11 @@
   "Emacs quick move minor mode"
   t)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
+
+;; =================================================
 
 ;; window resize key bindings
 ;; `enlarge-window': C-x ^

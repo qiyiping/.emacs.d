@@ -37,6 +37,7 @@
                           color-theme-solarized
                           ggtags
                           dictionary
+                          switch-window
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
