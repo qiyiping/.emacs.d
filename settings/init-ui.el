@@ -36,12 +36,11 @@
 ;;   (set-foreground-color "grey91")
 ;;   (set-cursor-color "steelblue"))
 
-(when window-system
-  (nyan-mode))
-
 (require 'color-theme)
-;; (load-theme 'solarized t)
-(color-theme-solarized)
+
+(when window-system
+  (color-theme-solarized)
+  (nyan-mode))
 
 
 ;; Highlight current line
