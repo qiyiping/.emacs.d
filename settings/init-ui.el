@@ -59,7 +59,7 @@
   (set-frame-parameter (selected-frame) 'alpha value))
 
 (when window-system
-  (transparency 93)
+  (transparency 100)
   ;; Set font size
   ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
   (set-face-attribute 'default nil :height 140))

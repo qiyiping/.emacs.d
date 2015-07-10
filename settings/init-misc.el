@@ -46,7 +46,7 @@
   "ace-jump-mode"
   "Emacs quick move minor mode"
   t)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-:") 'ace-jump-mode)
 
 (require 'switch-window)
 (global-set-key (kbd "C-x o") 'switch-window)
@@ -87,10 +87,6 @@
 
 (global-set-key [f8] 'browse-url-at-point)
 
-;; Use M-SPC in windows to set mark
-(when (eq system-type 'windows-nt)
-  (global-set-key (kbd "M-SPC") 'set-mark-command))
-
 ;; sudo edit
 (defun sudo-edit ()
   (interactive)
@@ -102,7 +98,6 @@
 (setq erc-server "irc.freenode.net")
 (setq erc-port 8000)
 (setq erc-nick "qyp")
-
 (erc-track-mode t)
 (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
                                 "324" "329" "332" "333" "353" "477"))
