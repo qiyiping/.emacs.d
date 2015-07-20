@@ -25,9 +25,6 @@
 (add-hook 'term-mode-hook
           (lambda ()
             (setq yas-dont-activate t)
-            (add-to-list 'term-bind-key-alist '("C-e" . move-end-of-line))
-            (add-to-list 'term-bind-key-alist '("C-f" . forward-char))
-            (add-to-list 'term-bind-key-alist '("C-b" . backward-char))
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
             (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
 
