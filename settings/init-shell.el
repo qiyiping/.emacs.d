@@ -28,6 +28,9 @@
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
             (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
 
-(global-set-key (kbd "C-c C-t") 'multi-term)
+;; eshell is my favorite
+(global-set-key (kbd "C-c C-t") (lambda ()
+                                  (interactive)
+                                  (eshell 't)))
 
 (provide 'init-shell)
