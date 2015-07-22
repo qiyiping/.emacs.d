@@ -26,6 +26,7 @@
 			  idle-highlight-mode
                           markdown-mode
                           zencoding-mode
+                          powerline
                           exec-path-from-shell
                           multi-term
                           csharp-mode

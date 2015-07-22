@@ -40,7 +40,8 @@
 
 (when window-system
   (color-theme-solarized)
-  (nyan-mode))
+  (nyan-mode)
+  (powerline-default-theme))
 
 
 ;; Highlight current line
