@@ -16,10 +16,14 @@
 
 (setq org-agenda-files (list "~/Documents/org/Plan.org"))
 
-;; LaTeX
-(setq org-latex-pdf-process
-      '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
-(add-to-list 'org-latex-packages-alist
-             '("" "xeCJK" t))
+(defun my-org-mode-hook ()
+  ;; LaTeX
+  (setq org-latex-pdf-process
+        '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "xeCJK" t)))
+
+(add-hook 'org-mode-hook 'my-org-mode-hook)
+
 
 (provide 'init-org)

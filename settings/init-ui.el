@@ -1,7 +1,7 @@
 ;;; init-ui.el --- user interface settings
 
 ;; Turn off menu/tool/scroll bar
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
