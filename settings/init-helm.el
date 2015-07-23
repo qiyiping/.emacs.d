@@ -35,7 +35,8 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-(define-key shell-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
+(add-hook 'eshell-mode-hook '(lambda()
+                               (local-set-key (kbd "C-c C-l") 'helm-eshell-history)))
 
 (helm-mode 1)
 
