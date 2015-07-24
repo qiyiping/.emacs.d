@@ -22,12 +22,6 @@
 ;;; multi-term
 (setq multi-term-program "/bin/bash")
 
-(add-hook 'term-mode-hook
-          (lambda ()
-            (setq yas-dont-activate t)
-            (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
-            (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
-
 ;; eshell is my favorite
 (global-set-key (kbd "C-c C-t") (lambda ()
                                   (interactive)
