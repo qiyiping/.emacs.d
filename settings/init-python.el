@@ -45,11 +45,13 @@
   (with-output-to-temp-buffer "PYDOC"
     (print (python-eldoc--get-doc-at-point symbol))))
 
+(defun my-switch-to-python-shell-buffer ()
+  (interactive)
+  (switch-to-buffer (format "*%s*" python-shell-buffer-name)))
+
 (add-hook 'python-mode-hook
-          (lambda () (define-key
-                       python-mode-map
-                       (kbd "C-c C-f")
-                       'my-pythondoc-at-point)))
+          '(lambda ()
+             (local-set-key (kbd "C-c C-f") 'my-pythondoc-at-point)))
 
 
 (provide 'init-python)
