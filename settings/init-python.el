@@ -45,13 +45,40 @@
   (with-output-to-temp-buffer "PYDOC"
     (print (python-eldoc--get-doc-at-point symbol))))
 
-(defun my-switch-to-python-shell-buffer ()
+(defun my-python-shell-buffer ()
+  (get-buffer (format "*%s*" python-shell-buffer-name)))
+
+(defun my-switch-to-python-shell ()
+  (let ((python-shell-buffer (my-python-shell-buffer)))
+    (if python-shell-buffer
+        (progn
+          (setq my-python-file-buffer (current-buffer))
+          (switch-to-buffer python-shell-buffer))
+      (message "no python shell is running"))))
+
+(defun my-switch-to-python-file ()
+  (if my-python-file-buffer
+      (switch-to-buffer my-python-file-buffer)))
+
+(defun my-switch-python-file-shell ()
   (interactive)
-  (switch-to-buffer (format "*%s*" python-shell-buffer-name)))
+  (if (eq (current-buffer) (my-python-shell-buffer))
+      (my-switch-to-python-file)
+    (my-switch-to-python-shell)))
+
+(defvar my-python-file-buffer
+  nil
+  "current python buffer")
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (local-set-key (kbd "C-c C-f") 'my-pythondoc-at-point)))
+             (local-set-key (kbd "C-c C-f") 'my-pythondoc-at-point)
+             (local-set-key (kbd "C-c o") 'my-switch-python-file-shell)))
+
+(add-hook 'inferior-python-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-f") 'my-pythondoc-at-point)
+             (local-set-key (kbd "C-c o") 'my-switch-python-file-shell)))
 
 
 (provide 'init-python)
