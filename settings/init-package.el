@@ -36,6 +36,7 @@
                           dirtree
                           web-mode
                           color-theme-solarized
+                          zenburn-theme
                           ggtags
                           dictionary
                           switch-window

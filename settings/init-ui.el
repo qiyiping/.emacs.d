@@ -37,9 +37,9 @@
 ;;   (set-cursor-color "steelblue"))
 
 (require 'color-theme)
-
 (when window-system
-  (color-theme-solarized)
+  ;; (color-theme-solarized)
+  (load-theme 'zenburn t)
   (nyan-mode)
   (powerline-default-theme))
 
