@@ -32,8 +32,17 @@
 (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
 
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; most commonly used key bindings
+;; prefix i => `helm-semantic-or-imenu'
+;; prefix m => `helm-man-woman'
+;; prefix / => `helm-find'
+;; prefix l => `helm-locate'
+;; prefix r => `helm-regexp'
+;; prefix t => `helm-top'
+;; prefix C-, => `helm-calcul-expression'
+(global-set-key (kbd "C-c h o") 'helm-occur)
 
 (add-hook 'eshell-mode-hook '(lambda()
                                (local-set-key (kbd "C-c C-l") 'helm-eshell-history)))
