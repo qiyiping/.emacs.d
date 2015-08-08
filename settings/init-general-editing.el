@@ -53,6 +53,9 @@
 
 ;; dired mode
 (require 'dired)
+(require 'dired-x)
+(setq-default dired-omit-files-p t)
+(setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-dwim-target t)
 
