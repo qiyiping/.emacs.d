@@ -54,12 +54,11 @@
 ;; dired mode
 (require 'dired)
 (require 'dired-x)
-(setq-default dired-omit-files-p t)
-(setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-dwim-target t)
-
-(setq dired-listing-switches "-lh")
+(setq dired-listing-switches "-lah")
+(setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..*$")
+(setq-default dired-omit-files-p t)
 
 (defun open-file-externally (file-name)
   (cond
