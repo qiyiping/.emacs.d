@@ -10,6 +10,20 @@
 (add-hook 'eshell-mode-hook '(lambda ()
 			       (local-set-key (kbd "C-l") 'eshell-clear)))
 
+(defun my-git-branch ()
+  (let ((branch (shell-command-to-string
+                 "git branch --no-color 2>/dev/null | sed -n 's/^\\* \\(.*\\)/ → \\1/'p")))
+    (replace-regexp-in-string (rx (* (any " \t\n")) eos)
+                              ""
+                              branch)))
+
+(setq eshell-prompt-function
+      (function
+       (lambda ()
+         (concat (abbreviate-file-name (eshell/pwd))
+                 (my-git-branch)
+                 (if (= (user-uid) 0) " # " " $ ")))))
+
 (defun shell-clear ()
   (interactive)
   (let ((old-max comint-buffer-maximum-size))
