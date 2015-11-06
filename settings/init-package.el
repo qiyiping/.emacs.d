@@ -30,7 +30,7 @@
                           exec-path-from-shell
                           multi-term
                           csharp-mode
-                          auto-complete-clang
+                          auto-complete-c-headers
                           scala-mode2
                           sbt-mode
                           dirtree
