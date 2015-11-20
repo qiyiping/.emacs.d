@@ -91,6 +91,25 @@
   (let ((symbol (symbol-at-point)))
     (if symbol (kill-new (symbol-name symbol)))))
 
+(defun current-regexp-at-point(regexp)
+  (save-excursion
+    (if (looking-at regexp)
+        (progn
+          (while (looking-at regexp)
+            (backward-char 1))
+          (forward-char 1)
+          (looking-at regexp)
+          (match-string 0)))))
+
+(defun my-ansi-color-apply-buffer(buffer)
+  "Apply ansi color on buffer. `buffer' should be *read-only*"
+  (with-current-buffer buffer
+    (if buffer-read-only
+        (progn
+          (toggle-read-only)
+          (ansi-color-apply-on-region (point-min) (point-max))
+          (toggle-read-only)))))
+
 (defun copy-line ()
   (interactive)
   (kill-ring-save (line-beginning-position) (line-end-position)))
