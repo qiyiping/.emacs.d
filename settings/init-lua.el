@@ -9,7 +9,8 @@
 
 (defun get-torch-help(stm)
   (if (executable-find "th")
-      (shell-command-to-string (format "th ~/.emacs.d/settings/lua_help.lua %s" stm))
+      (shell-command-to-string
+       (format "th ~/.emacs.d/settings/lua_help.lua %s" stm))
     "`th' command is not found. Please make sure that `Torch' is installed."))
 
 (defvar torch-stm-regexp
@@ -28,8 +29,10 @@
     (print (get-torch-help stm)))
   (my-ansi-color-apply-buffer (get-buffer "*Torch Help*")))
 
-(defvar my-lua-doc-path
-  "file:///Users/qiyiping/.emacs.d/doc/lua/lua-manual.html")
+(setq my-lua-doc-path
+      (concat "file://"
+              (file-name-as-directory (expand-file-name "~"))
+              ".emacs.d/doc/lua/lua-manual.html"))
 
 (defun my-get-lua-documentation (funcname)
   "Search Lua documentation for the word at the point."
