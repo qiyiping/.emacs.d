@@ -16,6 +16,7 @@
   "[a-zA-Z0-9\\.\\-]+")
 
 (defun get-torch-help-at-point(stm)
+  "Get Torch document for the statement at the point."
   (interactive (list
                 (let ((current-stm (current-regexp-at-point torch-stm-regexp)))
                   (read-string (format "statement: (%s)" current-stm)
@@ -27,4 +28,21 @@
     (print (get-torch-help stm)))
   (my-ansi-color-apply-buffer (get-buffer "*Torch Help*")))
 
+(defvar my-lua-doc-path
+  "file:///Users/qiyiping/.emacs.d/doc/lua/lua-manual.html")
+
+(defun my-get-lua-documentation (funcname)
+  "Search Lua documentation for the word at the point."
+  (interactive (list
+                (let ((current-funcname (lua-funcname-at-point)))
+                  (read-string (format "function name: (%s)" current-funcname)
+                               ""
+                               nil
+                               current-funcname))))
+  (message funcname)
+  (if (> (length funcname) 0)
+      (eww (concat my-lua-doc-path "#pdf-" funcname))
+    (message "Cannot find function at point")))
+
 (provide 'init-lua)
+
