@@ -51,33 +51,6 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
-;; dired mode
-(require 'dired)
-(require 'dired-x)
-(put 'dired-find-alternate-file 'disabled nil)
-(setq dired-dwim-target t)
-(setq dired-listing-switches "-lah")
-(setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..*$")
-(setq-default dired-omit-files-p t)
-
-(defun open-file-externally (file-name)
-  (cond
-   ((eq system-type 'windows-nt)
-    (w32-shell-execute "open" file-name))
-   ((eq system-type 'darwin)
-    (shell-command (format "open %s" file-name)))
-   ((eq system-type 'gnu/linux)
-    (let ((process-connection-type nil))
-      (start-process "" nil "xdg-open" file-name)))))
-
-(defun my-dired-find-file (&optional prefix)
-  (interactive "P")
-  (if prefix
-      (open-file-externally (dired-get-file-for-visit))
-    (dired-find-file)))
-(define-key dired-mode-map "\r" 'my-dired-find-file)
-
-(require 'dirtree)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some handy edit toolkit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

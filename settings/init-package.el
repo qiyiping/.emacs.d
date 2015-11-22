@@ -25,6 +25,7 @@
 			  magit
 			  idle-highlight-mode
                           markdown-mode
+                          dired+
                           zencoding-mode
                           powerline
                           exec-path-from-shell

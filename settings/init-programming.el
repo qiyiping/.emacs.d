@@ -1,6 +1,6 @@
 ;;; init-programming.el --- general programming settings
 
-(global-set-key (kbd "C-c M") 'comment-region)
+;; (global-set-key (kbd "C-c M") 'comment-region)
 (global-set-key [f7] 'compile)
 
 ;; smart-compile+ package
