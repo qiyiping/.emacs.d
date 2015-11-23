@@ -12,6 +12,7 @@
 (require 'init-yasnippet)
 (require 'init-ibuffer)
 (require 'init-shell)
+(require 'init-dired)
 ;; (require 'init-ido)
 (require 'init-helm)
 (require 'init-isearch)

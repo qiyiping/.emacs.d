@@ -29,3 +29,5 @@
 
 
 (require 'dirtree)
+
+(provide 'init-dired)

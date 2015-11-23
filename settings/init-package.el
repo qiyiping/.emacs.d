@@ -26,6 +26,7 @@
 			  idle-highlight-mode
                           markdown-mode
                           dired+
+                          rainbow-delimiters
                           zencoding-mode
                           powerline
                           exec-path-from-shell

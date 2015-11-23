@@ -30,7 +30,8 @@
 
 (defun programming-common-settings ()
   (setq indent-tabs-mode nil)
-  (setq show-trailing-whitespace t )
+  (setq show-trailing-whitespace t)
+  (rainbow-delimiters-mode t)
   (idle-highlight-mode t))
 
 (if (> emacs-major-version 23)
