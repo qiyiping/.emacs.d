@@ -28,6 +28,7 @@
                           dired+
                           rainbow-delimiters
                           zencoding-mode
+                          slime
                           powerline
                           exec-path-from-shell
                           multi-term

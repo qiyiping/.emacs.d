@@ -11,4 +11,7 @@
 ;; (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 ;; (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
+(setq inferior-lisp-program "sbcl")
+(slime-setup)
+
 (provide 'init-lisp)
