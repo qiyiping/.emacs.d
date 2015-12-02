@@ -4,12 +4,10 @@
 
 (setq ibuffer-saved-filter-groups
       (quote (("default"
-               ("Org" (or
-                       (mode . org-mode)
-                       (name . "^\\*Calendar\\*$")
-                       (name . "^diary$")))
+               ("Dired" (mode . dired-mode))
                ("Shell" (or
                          (mode . shell-mode)
+                         (mode . eshell-mode)
                          (mode . term-mode)
                          (mode . inferior-python-mode)))
                ("Programming" (or
@@ -27,16 +25,18 @@
                                (name . "^\\*R\\*$")
                                (filename . ".*[Mm]akefile")
                                (mode . makefile-mode)))
-               ("IDL" (or
-                       (mode . protobuf-mode)
-                       (mode . thrift-mode)))
-               ("Dired" (mode . dired-mode))
                ("Emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
                          (name . "^\\*ESS\\*$")
-                         (name . "^\\*Bookmark List\\*$")
-                         (name . "^\\*eshell\\*$")))
+                         (name . "^\\*Bookmark List\\*$")))
+               ("Org" (or
+                       (mode . org-mode)
+                       (name . "^\\*Calendar\\*$")
+                       (name . "^diary$")))
+               ("IDL" (or
+                       (mode . protobuf-mode)
+                       (mode . thrift-mode)))
                ("Mail" (or
                         (mode . message-mode)
                         (mode . mail-mode)
@@ -52,9 +52,9 @@
                         (mode . Info-mode)
                         (mode . Man-mode)
                         (mode . help-mode)))
-               ("ERC"   (or
-                         (mode . erc-mode)
-                         (mode . erc-list-mode)))))))
+               ("ERC" (or
+                       (mode . erc-mode)
+                       (mode . erc-list-mode)))))))
 
 (setq ibuffer-sorting-mode major-mode)
 (setq ibuffer-formats '((mark modified
