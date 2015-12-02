@@ -15,7 +15,7 @@
    ((eq system-type 'windows-nt)
     (w32-shell-execute "open" file-name))
    ((eq system-type 'darwin)
-    (shell-command (format "open %s" file-name)))
+    (shell-command (format "open \"%s\"" file-name)))
    ((eq system-type 'gnu/linux)
     (let ((process-connection-type nil))
       (start-process "" nil "xdg-open" file-name)))))
