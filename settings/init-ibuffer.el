@@ -25,6 +25,8 @@
                                (name . "^\\*R\\*$")
                                (filename . ".*[Mm]akefile")
                                (mode . makefile-mode)))
+               ("DocView" (or
+                           (mode . doc-view-mode)))
                ("Emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
