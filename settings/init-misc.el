@@ -65,8 +65,8 @@
 ;; Chinese calendar
 (require 'cal-china-x)
 (setq mark-holidays-in-calendar t)
-(setq cal-china-x-priority1-holidays cal-china-x-chinese-holidays)
-(setq calendar-holidays cal-china-x-priority1-holidays)
+(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+(setq calendar-holidays cal-china-x-important-holidays)
 
 ;; Dictionary
 (global-set-key (kbd "C-c d") 'dictionary-lookup-definition)

@@ -30,6 +30,7 @@
                           zencoding-mode
                           slime
                           powerline
+                          cal-china-x
                           exec-path-from-shell
                           multi-term
                           csharp-mode
