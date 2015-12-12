@@ -31,6 +31,7 @@
                           slime
                           powerline
                           cal-china-x
+			  xcscope
                           exec-path-from-shell
                           multi-term
                           csharp-mode
