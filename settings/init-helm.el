@@ -43,6 +43,19 @@
 ;; prefix t => `helm-top'
 ;; prefix C-, => `helm-calcul-expression'
 (global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-c h b") 'helm-bibtex)
+
+;; helm-bibtex config
+(setq helm-bibtex-bibliography '("~/快盘/jabref/ref.bib"))
+(setq helm-bibtex-pdf-field "File")
+(setq helm-bibtex-pdf-symbol "⌘")
+(setq helm-bibtex-notes-symbol "✎")
+
+(setq helm-bibtex-format-citation-functions
+      '((org-mode      . helm-bibtex-format-citation-org-link-to-PDF)
+        (latex-mode    . helm-bibtex-format-citation-cite)
+        (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
+        (default       . helm-bibtex-format-citation-default)))
 
 (add-hook 'eshell-mode-hook '(lambda()
                                (local-set-key (kbd "C-c C-l") 'helm-eshell-history)))
