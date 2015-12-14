@@ -14,7 +14,8 @@
 			  google-c-style
                           helm
                           helm-projectile
-                          helm-bibtex
+                          ;; helm-bibtex
+                          ebib
                           nyan-mode
 			  auctex
                           ace-jump-mode
