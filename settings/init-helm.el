@@ -50,6 +50,9 @@
 (setq helm-bibtex-pdf-field "File")
 (setq helm-bibtex-pdf-symbol "⌘")
 (setq helm-bibtex-notes-symbol "✎")
+(setq helm-bibtex-notes-path "~/快盘/jabref/notes.org")
+(setq helm-bibtex-pdf-open-function 'open-file-externally)
+
 
 (setq helm-bibtex-format-citation-functions
       '((org-mode      . helm-bibtex-format-citation-org-link-to-PDF)
