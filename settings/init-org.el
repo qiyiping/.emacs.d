@@ -25,5 +25,24 @@
 
 (add-hook 'org-mode-hook 'my-org-mode-hook)
 
+;; http://orgmode.org/manual/Easy-Templates.html
+;; To insert a structural element, type a ‘<’, followed by a template
+;; selector and <TAB>. Completion takes effect only when the above
+;; keystrokes are typed on a line by itself.
+;; The following template selectors are currently supported.
+;; s    #+BEGIN_SRC ... #+END_SRC
+;; e    #+BEGIN_EXAMPLE ... #+END_EXAMPLE
+;; q    #+BEGIN_QUOTE ... #+END_QUOTE
+;; v    #+BEGIN_VERSE ... #+END_VERSE
+;; c    #+BEGIN_CENTER ... #+END_CENTER
+;; l    #+BEGIN_LaTeX ... #+END_LaTeX
+;; L    #+LaTeX:
+;; h    #+BEGIN_HTML ... #+END_HTML
+;; H    #+HTML:
+;; a    #+BEGIN_ASCII ... #+END_ASCII
+;; A    #+ASCII:
+;; i    #+INDEX: line
+;; I    #+INCLUDE: line
+
 
 (provide 'init-org)
