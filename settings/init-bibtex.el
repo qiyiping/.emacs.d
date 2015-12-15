@@ -4,14 +4,14 @@
 (global-set-key (kbd "C-c h b") 'helm-bibtex)
 
 (defvar my-bibtex-database
-  "~/快盘/jabref/ref.bib"
+  "~/快盘/jabref/refs.bib"
   "BibTeX database")
 
 (defvar my-bibtex-notes
   "~/快盘/jabref/notes.org"
   "BibTeX notes")
 
-(setq helm-bibtex-bibliography '(my-bibtex-database))
+(setq helm-bibtex-bibliography (list my-bibtex-database))
 (setq helm-bibtex-notes-path my-bibtex-notes)
 
 (setq helm-bibtex-pdf-field "File")
@@ -29,5 +29,10 @@
 
 (require 'gscholar-bibtex)
 (setq gscholar-bibtex-database-file my-bibtex-database)
+(setq gscholar-bibtex-default-source "Google Scholar")
+
+(defun gscholar-bibtex-write-bibtex-to-database ()
+  (interactive)
+  (warn "write-bibtex-to-database is disabled!"))
 
 (provide 'init-bibtex)
