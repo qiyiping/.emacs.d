@@ -57,6 +57,7 @@
         (latex-mode    . helm-bibtex-format-citation-cite)
         (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
         (default       . helm-bibtex-format-citation-default)))
+(setq bibtex-align-at-equal-sign t)
 
 (add-hook 'eshell-mode-hook '(lambda()
                                (local-set-key (kbd "C-c C-l") 'helm-eshell-history)))
