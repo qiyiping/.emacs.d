@@ -19,6 +19,8 @@
 (setq helm-bibtex-notes-symbol "✎")
 (setq helm-bibtex-pdf-open-function 'open-file-externally)
 
+(setq helm-bibtex-additional-search-fields '(tags))
+
 (setq helm-bibtex-format-citation-functions
       '((org-mode      . helm-bibtex-format-citation-org-link-to-PDF)
         (latex-mode    . helm-bibtex-format-citation-cite)
