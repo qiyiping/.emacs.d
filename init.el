@@ -31,3 +31,4 @@
 (require 'init-xml)
 (require 'init-web)
 (require 'init-scala)
+(require 'init-bibtex)

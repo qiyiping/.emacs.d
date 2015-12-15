@@ -21,7 +21,9 @@
       (function
        (lambda ()
          (concat (abbreviate-file-name (eshell/pwd))
-                 (my-git-branch)
+                 (if (executable-find "git")
+                     (my-git-branch)
+                   "")
                  (if (= (user-uid) 0) " # " " $ ")))))
 
 (defun shell-clear ()

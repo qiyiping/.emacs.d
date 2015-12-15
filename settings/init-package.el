@@ -15,6 +15,7 @@
                           helm
                           helm-projectile
                           helm-bibtex
+                          gscholar-bibtex
                           nyan-mode
 			  auctex
                           ace-jump-mode
