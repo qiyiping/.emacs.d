@@ -43,6 +43,7 @@
                           dirtree
                           web-mode
                           color-theme-solarized
+                          org
                           zenburn-theme
                           ggtags
                           dictionary
