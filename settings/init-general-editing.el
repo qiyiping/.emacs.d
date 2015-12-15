@@ -93,4 +93,8 @@
                                 (interactive)
                                 (join-line -1)))
 
+(defun my-insert-file-path ()
+  (interactive)
+  (insert (read-file-name "File: ")))
+
 (provide 'init-general-editing)
