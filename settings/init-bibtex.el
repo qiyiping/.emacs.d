@@ -29,6 +29,10 @@
 
 (setq bibtex-align-at-equal-sign t)
 
+(add-hook 'bibtex-mode-hook
+          (lambda ()
+            (set-fill-column 150)))
+
 (require 'gscholar-bibtex)
 (setq gscholar-bibtex-database-file my-bibtex-database)
 (setq gscholar-bibtex-default-source "Google Scholar")

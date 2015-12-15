@@ -18,7 +18,7 @@
 (transient-mark-mode t)
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
-(setq fill-column 80)
+(set-fill-column 80)
 
 ;; Backup file by copying to specified place
 (setq backup-by-copying t)
