@@ -29,7 +29,6 @@
                           markdown-mode
                           dired+
                           rainbow-delimiters
-                          zencoding-mode
                           slime
                           powerline
                           cal-china-x

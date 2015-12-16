@@ -1,5 +1,6 @@
 ;;; init-shell.el --- shell/eshell settings
 
+;;; eshell settings
 ;;; eshell clear http://www.khngai.com/emacs/eshell.php
 (defun eshell-clear ()
   (interactive)
@@ -26,6 +27,12 @@
                    "")
                  (if (= (user-uid) 0) " # " " $ ")))))
 
+;;; eshell is my favorite
+(global-set-key (kbd "C-c C-t") (lambda ()
+                                  (interactive)
+                                  (eshell 't)))
+
+;;; shell mode settings
 (defun shell-clear ()
   (interactive)
   (let ((old-max comint-buffer-maximum-size))
@@ -38,10 +45,5 @@
 
 ;;; multi-term
 (setq multi-term-program "/bin/bash")
-
-;; eshell is my favorite
-(global-set-key (kbd "C-c C-t") (lambda ()
-                                  (interactive)
-                                  (eshell 't)))
 
 (provide 'init-shell)

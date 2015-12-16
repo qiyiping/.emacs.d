@@ -28,7 +28,6 @@
 (require 'init-org)
 (require 'init-markdown)
 (require 'init-eim)
-(require 'init-xml)
 (require 'init-web)
 (require 'init-scala)
 (require 'init-bibtex)

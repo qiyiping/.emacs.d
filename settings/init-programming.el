@@ -62,17 +62,6 @@
 (global-set-key (kbd "C-x i") 'programming-imenu-jump)
 (global-set-key (kbd "C-x p") 'programming-imenu-jump-back)
 
-;; json pretty printing
-(defun pretty-json ()
-  (interactive)
-  (if (/= 0
-          (shell-command-on-region (region-beginning)
-                                   (region-end)
-                                   "python ~/.emacs.d/settings/json_pretty.py"
-                                   (current-buffer)
-                                   t))
-      (message "failed to parse the region")))
-
 ;; other useful programming modes
 (require 'thrift-mode)
 (require 'protobuf-mode)

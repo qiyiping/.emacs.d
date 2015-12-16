@@ -20,6 +20,8 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-fill-column 80)
 
+(setq-default indent-tabs-mode nil)
+
 ;; Backup file by copying to specified place
 (setq backup-by-copying t)
 (setq backup-directory-alist '((".*" . "~/.emacs.d/backup/")))
