@@ -22,7 +22,7 @@
       (function
        (lambda ()
          (concat (abbreviate-file-name (eshell/pwd))
-                 (if (executable-find "git")
+                 (if (not (eq system-type 'windows-nt))
                      (my-git-branch)
                    "")
                  (if (= (user-uid) 0) " # " " $ ")))))
