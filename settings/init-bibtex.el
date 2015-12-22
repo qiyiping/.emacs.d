@@ -27,12 +27,14 @@
         (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
         (default       . helm-bibtex-format-citation-default)))
 
+;; basic bibtex-mode setting
 (setq bibtex-align-at-equal-sign t)
 
 (add-hook 'bibtex-mode-hook
           (lambda ()
             (set-fill-column 150)))
 
+;; gscholar-bibtex config
 (require 'gscholar-bibtex)
 (setq gscholar-bibtex-database-file my-bibtex-database)
 (setq gscholar-bibtex-default-source "Google Scholar")
