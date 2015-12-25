@@ -43,6 +43,7 @@
                           web-mode
                           color-theme-solarized
                           org
+                          jedi
                           zenburn-theme
                           ggtags
                           dictionary
