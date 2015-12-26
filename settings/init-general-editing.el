@@ -53,6 +53,11 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;; undo tree
+;; C-x u -> `undo-tree-visualize'
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some handy edit toolkit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -89,9 +94,12 @@
   (interactive)
   (kill-ring-save (line-beginning-position) (line-end-position)))
 
-(global-set-key (kbd "C-c W") 'copy-symbol-at-point)
+(global-set-key (kbd "C-c w") 'copy-symbol-at-point)
 (global-set-key (kbd "C-c K") 'copy-line)
-(global-set-key (kbd "C-c J") (lambda ()
+(global-set-key (kbd "C-c k") (lambda ()
+                                (interactive)
+                                (kill-whole-line)))
+(global-set-key (kbd "C-c j") (lambda ()
                                 (interactive)
                                 (join-line -1)))
 

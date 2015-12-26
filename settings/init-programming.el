@@ -41,26 +41,26 @@
 
 ;; imenu settings
 (setq-default imenu-auto-rescan t)
-(defvar programming-imenu-positions
-  '()
-  "imenu jump stack")
+;; (defvar programming-imenu-positions
+;;   '()
+;;   "imenu jump stack")
 
-(defun programming-imenu-jump ()
-  (interactive)
-  (let ((pos (point)))
-    (unless (eq (car programming-imenu-positions) pos)
-      (push pos programming-imenu-positions)))
-  (call-interactively 'imenu))
+;; (defun programming-imenu-jump ()
+;;   (interactive)
+;;   (let ((pos (point)))
+;;     (unless (eq (car programming-imenu-positions) pos)
+;;       (push pos programming-imenu-positions)))
+;;   (call-interactively 'imenu))
 
-(defun programming-imenu-jump-back ()
-  (interactive)
-  (let ((pos (pop programming-imenu-positions)))
-    (if pos
-        (goto-char pos)
-      (message "imenu jump stack is empty"))))
+;; (defun programming-imenu-jump-back ()
+;;   (interactive)
+;;   (let ((pos (pop programming-imenu-positions)))
+;;     (if pos
+;;         (goto-char pos)
+;;       (message "imenu jump stack is empty"))))
 
-(global-set-key (kbd "C-x i") 'programming-imenu-jump)
-(global-set-key (kbd "C-x p") 'programming-imenu-jump-back)
+;; (global-set-key (kbd "C-x i") 'programming-imenu-jump)
+;; (global-set-key (kbd "C-x p") 'programming-imenu-jump-back)
 
 ;; other useful programming modes
 (require 'thrift-mode)

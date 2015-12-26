@@ -28,6 +28,8 @@
 			  idle-highlight-mode
                           markdown-mode
                           dired+
+                          undo-tree
+                          beacon
                           rainbow-delimiters
                           slime
                           powerline

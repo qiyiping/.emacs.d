@@ -92,7 +92,7 @@
   (interactive)
   (if (buffer-file-name)
       (find-alternate-file (concat "/sudo::" (buffer-file-name)))
-    (find-file (concat "/sudo::" (ido-read-file-name "File: ")))))
+    (find-file (concat "/sudo::" (read-file-name "File: ")))))
 
 ;; erc
 (setq erc-server "irc.freenode.net")
