@@ -66,5 +66,4 @@
   (set-face-attribute 'default nil :height 140))
 
 (beacon-mode 1)
-
 (provide 'init-ui)
