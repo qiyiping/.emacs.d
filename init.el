@@ -31,3 +31,4 @@
 (require 'init-web)
 (require 'init-scala)
 (require 'init-bibtex)
+(require 'init-mail)
