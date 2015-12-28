@@ -25,6 +25,7 @@
 
 (add-hook 'org-mode-hook 'my-org-mode-hook)
 
+
 ;; http://orgmode.org/manual/Easy-Templates.html
 ;; To insert a structural element, type a ‘<’, followed by a template
 ;; selector and <TAB>. Completion takes effect only when the above
@@ -44,5 +45,6 @@
 ;; i    #+INDEX: line
 ;; I    #+INCLUDE: line
 
+;; http://orgmode.org/orgcard.txt
 
 (provide 'init-org)
