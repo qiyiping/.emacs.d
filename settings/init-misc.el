@@ -108,8 +108,10 @@
   nil)
 
 (defun my-take-a-break-function ()
-  (with-output-to-temp-buffer "*TAKE A BREAK"
-    (print "TAKE A BREAK & DRINK SOME WATER")))
+  (with-output-to-temp-buffer "*TAKE A BREAK*"
+    (print (concat
+            (current-time-string)
+            "    TAKE A BREAK & DRINK SOME WATER"))))
 
 (defun my-setup-take-a-break-timer ()
   (if (not my-take-a-break-timer)
