@@ -103,4 +103,27 @@
                                 "324" "329" "332" "333" "353" "477"))
 (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
 
+;; timer task
+(defvar my-take-a-break-timer
+  nil)
+
+(defun my-take-a-break-function ()
+  (with-output-to-temp-buffer "*TAKE A BREAK"
+    (print "TAKE A BREAK & DRINK SOME WATER")))
+
+(defun my-setup-take-a-break-timer ()
+  (if (not my-take-a-break-timer)
+      (setq my-take-a-break-timer
+            (run-with-timer 3600 3600 'my-take-a-break-function))))
+
+(defun my-toggle-take-a-break ()
+  (interactive)
+  (if my-take-a-break-timer
+      (progn
+        (cancel-timer my-take-a-break-timer)
+        (setq my-take-a-break-timer nil))
+    (my-setup-take-a-break-timer)))
+
+(my-setup-take-a-break-timer)
+
 (provide 'init-misc)
