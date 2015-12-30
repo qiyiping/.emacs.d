@@ -19,6 +19,7 @@
                           nyan-mode
 			  auctex
                           ace-jump-mode
+                          ace-pinyin
 			  autopair
 			  paredit
 			  smex

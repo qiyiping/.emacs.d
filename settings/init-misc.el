@@ -46,7 +46,8 @@
   "ace-jump-mode"
   "Emacs quick move minor mode"
   t)
-(define-key global-map (kbd "C-:") 'ace-jump-mode)
+(ace-pinyin-global-mode 1)
+(define-key global-map (kbd "C-:") 'ace-jump-char-mode)
 
 (require 'switch-window)
 (global-set-key (kbd "C-x o") 'switch-window)
