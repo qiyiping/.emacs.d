@@ -17,8 +17,19 @@
 
 (transient-mark-mode t)
 
+;; auto fill
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-fill-column 80)
+
+;; flyspell
+(defvar writing-mode-hooks '(text-mode-hook
+                             org-mode-hook))
+
+(when (or (eq system-type 'darwin)
+	  (eq system-type 'gnu/linux)
+	  (eq system-type 'cygwin))
+  (dolist (mode-hook writing-mode-hooks)
+    (add-hook mode-hook '(lambda () (flyspell-mode +1)))))
 
 (setq-default indent-tabs-mode nil)
 
