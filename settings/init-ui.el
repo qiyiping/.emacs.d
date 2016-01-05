@@ -5,13 +5,6 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(when window-system
-  (setq frame-title-format '(buffer-file-name "%f" ("%b")))
-  (tooltip-mode -1)
-  (mouse-wheel-mode t)
-  (blink-cursor-mode -1)
-  (setq x-select-enable-clipboard t))
-
 ;; supress gui startup message
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
@@ -20,36 +13,11 @@
 (setq display-time-day-and-date t)
 (display-time)
 
+;; display row and column number
 (column-number-mode t)
 (line-number-mode t)
 
-;; Set background/foreground mannually
-;; Use `list-color-display' to show available colors
-;; For console:
-;; `TERM' environment variable should be set to xterm-256color
-;; alias e="emacs -bg color-253 -fg color-236 -cr color-27"
-;; For window system:
-
-;; (when window-system
-;;   (nyan-mode)
-;;   (set-background-color "grey31")
-;;   (set-foreground-color "grey91")
-;;   (set-cursor-color "steelblue"))
-
-(require 'color-theme)
-(when window-system
-  ;; (color-theme-solarized)
-  (load-theme 'zenburn t)
-  (nyan-mode)
-  (powerline-default-theme))
-
-
-;; Highlight current line
-;; (when (> (display-color-cells) 8)
-;;   (global-hl-line-mode t)
-;;   (if window-system
-;;       (set-face-background 'hl-line "DarkOliveGreen")))
-
+;; highlight current line
 (when (> (display-color-cells) 8)
   (global-hl-line-mode t))
 
@@ -59,11 +27,24 @@
   (interactive "nOpaque degree 0 - 100:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
+(require 'color-theme)
+
 (when window-system
   (transparency 100)
   ;; Set font size
   ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
-  (set-face-attribute 'default nil :height 140))
+  (set-face-attribute 'default nil :height 140)
+  (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+  (tooltip-mode -1)
+  (mouse-wheel-mode t)
+  (blink-cursor-mode -1)
+  (setq x-select-enable-clipboard t)
+  ;; color theme
+  ;; alternative choice `color-theme-solarized'
+  (load-theme 'zenburn t)
+  ;; mode line
+  (nyan-mode)
+  (powerline-default-theme))
 
 (beacon-mode 1)
 (provide 'init-ui)
