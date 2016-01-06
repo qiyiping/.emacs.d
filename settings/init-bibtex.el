@@ -34,6 +34,10 @@
           (lambda ()
             (set-fill-column 150)))
 
+(defun my-insert-pdf-path ()
+  (interactive)
+  (insert (read-file-name "File: " "~/kuaipan/paper/")))
+
 ;; gscholar-bibtex config
 (require 'gscholar-bibtex)
 (setq gscholar-bibtex-database-file my-bibtex-database)
