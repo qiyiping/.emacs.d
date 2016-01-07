@@ -40,7 +40,6 @@
                           multi-term
                           csharp-mode
                           auto-complete-c-headers
-                          ac-math
                           scala-mode2
                           sbt-mode
                           dirtree

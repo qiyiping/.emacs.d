@@ -1,3 +1,9 @@
+;; init-auto-complete.el --- auto-complete settings
+
+;; how to enable ac in major-mode?
+;; add major-mode to `ac-modes'
+;; setup `ac-source' for the major-mode
+
 (require 'auto-complete-config)
 (ac-config-default)
 
@@ -8,17 +14,5 @@
   (add-to-list 'ac-sources 'ac-source-yasnippet))
 
 (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
-
-(defun my-ac-latex-mode-setup ()
-  (add-to-list 'ac-sources 'ac-source-math-unicode)
-  (add-to-list 'ac-sources 'ac-source-math-latex)
-  (add-to-list 'ac-sources 'ac-source-latex-commands))
-
-(add-hook 'LaTeX-mode-hook 'my-ac-latex-mode-setup)
-
-(defun my-ac-org-mode-setup ()
-  (add-to-list 'ac-sources 'ac-source-math-unicode))
-
-(add-hook 'org-mode-hook 'my-ac-org-mode-setup)
 
 (provide 'init-auto-complete)
