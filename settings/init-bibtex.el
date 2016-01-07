@@ -4,11 +4,11 @@
 (global-set-key (kbd "C-c h b") 'helm-bibtex)
 
 (defvar my-bibtex-database
-  "~/快盘/jabref/refs.bib"
+  "~/kuaipan/jabref/refs.bib"
   "BibTeX database")
 
 (defvar my-bibtex-notes
-  "~/快盘/jabref/notes.org"
+  "~/kuaipan/jabref/notes.org"
   "BibTeX notes")
 
 (setq helm-bibtex-bibliography (list my-bibtex-database))
@@ -42,6 +42,7 @@
 (require 'gscholar-bibtex)
 (setq gscholar-bibtex-database-file my-bibtex-database)
 (setq gscholar-bibtex-default-source "Google Scholar")
+(global-set-key (kbd "C-c g") 'gscholar-bibtex)
 
 (defun gscholar-bibtex-write-bibtex-to-database ()
   (interactive)
