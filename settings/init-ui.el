@@ -42,6 +42,9 @@
   ;; color theme
   ;; alternative choice `color-theme-solarized'
   (load-theme 'zenburn t)
+  ;; toggle full screen
+  (toggle-frame-maximized)
+  ;; (toggle-frame-fullscreen)
   ;; mode line
   (nyan-mode)
   (powerline-default-theme))
