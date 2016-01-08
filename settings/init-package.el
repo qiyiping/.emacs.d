@@ -33,6 +33,7 @@
                           beacon
                           rainbow-delimiters
                           slime
+                          swiper
                           powerline
                           cal-china-x
 			  xcscope

@@ -92,6 +92,9 @@
 (ace-pinyin-global-mode 1)
 (define-key global-map (kbd "C-:") 'ace-jump-char-mode)
 
+;; swiper
+(global-set-key (kbd "C-c o") 'swiper)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some handy edit toolkit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
