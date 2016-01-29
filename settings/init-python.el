@@ -7,6 +7,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
+;; virtualenvwrapper
+(setq venv-location "~/.virtualenv/")
+
 ;; `auto-mode-alist' for python
 (add-to-list 'auto-mode-alist '("SConstruct\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("YBUILD\\'" . python-mode))

@@ -48,6 +48,7 @@
                           color-theme-solarized
                           org
                           jedi
+                          virtualenvwrapper
                           zenburn-theme
                           ggtags
                           dictionary
