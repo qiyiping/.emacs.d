@@ -48,6 +48,7 @@
                           color-theme-solarized
                           org
                           jedi
+                          pungi
                           zenburn-theme
                           ggtags
                           dictionary

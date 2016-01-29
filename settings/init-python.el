@@ -4,7 +4,8 @@
 ;; http://tkf.github.io/emacs-jedi/latest/
 ;; requirement
 ;; python package: jedi, epc, virtualenv
-(add-hook 'python-mode-hook 'jedi:setup)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'pungi:setup-jedi)
 (setq jedi:complete-on-dot t)
 
 ;; `auto-mode-alist' for python
