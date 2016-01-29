@@ -74,6 +74,6 @@
         (setq my-take-a-break-timer nil))
     (my-setup-take-a-break-timer)))
 
-(my-setup-take-a-break-timer)
+;; (my-setup-take-a-break-timer)
 
 (provide 'init-misc)
