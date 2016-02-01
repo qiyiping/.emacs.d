@@ -35,6 +35,7 @@
                           slime
                           swiper
                           powerline
+                          vlf
                           cal-china-x
 			  xcscope
                           exec-path-from-shell

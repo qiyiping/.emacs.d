@@ -64,6 +64,9 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;; very large file
+(require 'vlf-setup)
+
 ;; undo tree
 ;; C-x u -> `undo-tree-visualize'
 (require 'undo-tree)
