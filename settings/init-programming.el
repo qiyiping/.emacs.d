@@ -11,6 +11,7 @@
 (which-function-mode t)
 
 (require 'xcscope)
+(cscope-setup)
 
 (defun programming-cleanup-buffer ()
   (interactive)
