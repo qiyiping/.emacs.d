@@ -35,10 +35,8 @@
 ;;; shell mode settings
 (defun shell-clear ()
   (interactive)
-  (let ((old-max comint-buffer-maximum-size))
-    (setq comint-buffer-maximum-size 0)
-    (comint-truncate-buffer)
-    (setq comint-buffer-maximum-size old-max)))
+  (let ((comint-buffer-maximum-size 0))
+    (comint-truncate-buffer)))
 
 (add-hook 'shell-mode-hook '(lambda ()
 			      (local-set-key (kbd "C-l") 'shell-clear)))

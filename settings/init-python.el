@@ -74,7 +74,8 @@
 (add-hook 'inferior-python-mode-hook
           '(lambda ()
              (local-set-key (kbd "C-c C-f") 'my-pythondoc-at-point)
-             (local-set-key (kbd "C-c o") 'my-switch-python-file-shell)))
+             (local-set-key (kbd "C-c o") 'my-switch-python-file-shell)
+             (local-set-key (kbd "C-l") 'shell-clear)))
 
 
 (provide 'init-python)
