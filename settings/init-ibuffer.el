@@ -23,6 +23,8 @@
                                (mode . scala-mode)
                                (mode . java-mode)
                                (name . "^\\*R\\*$")
+                               (name . "^\\*ein:notebooklist.*\\*$")
+                               (name . "^\\*ein:.*ipynb\\*$")
                                (filename . ".*[Mm]akefile")
                                (mode . makefile-mode)))
                ("DocView" (or

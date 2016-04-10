@@ -78,4 +78,10 @@
              (local-set-key (kbd "C-l") 'shell-clear)))
 
 
+;; ein
+(setq ein:use-auto-complete t)
+(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+
+
+
 (provide 'init-python)
