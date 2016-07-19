@@ -46,7 +46,7 @@
   (toggle-frame-maximized)
   ;; (toggle-frame-fullscreen)
   ;; mode line
-  (nyan-mode)
+  ;; (nyan-mode)
   (powerline-default-theme))
 
 (beacon-mode 1)

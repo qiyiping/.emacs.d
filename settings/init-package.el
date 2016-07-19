@@ -48,8 +48,10 @@
                           web-mode
                           color-theme-solarized
                           org
+                          ;; python related mode
                           jedi
                           ein
+                          anaconda-mode
                           virtualenvwrapper
                           zenburn-theme
                           ggtags
