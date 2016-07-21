@@ -10,23 +10,23 @@
   (package-refresh-contents))
 
 (defvar my-package-list '(auto-complete
-			  yasnippet
-			  google-c-style
+                          yasnippet
+                          google-c-style
                           helm
                           helm-projectile
                           helm-bibtex
                           gscholar-bibtex
                           nyan-mode
-			  auctex
+                          auctex
                           ace-jump-mode
                           ace-pinyin
-			  autopair
-			  paredit
-			  smex
-			  htmlize
-			  ido-ubiquitous
-			  magit
-			  idle-highlight-mode
+                          autopair
+                          paredit
+                          smex
+                          htmlize
+                          ido-ubiquitous
+                          magit
+                          idle-highlight-mode
                           markdown-mode
                           dired+
                           undo-tree
@@ -37,7 +37,7 @@
                           powerline
                           vlf
                           cal-china-x
-			  xcscope
+                          xcscope
                           exec-path-from-shell
                           multi-term
                           csharp-mode
@@ -51,7 +51,7 @@
                           ;; python related mode
                           jedi
                           ein
-                          anaconda-mode
+                          ;; anaconda-mode
                           virtualenvwrapper
                           zenburn-theme
                           ggtags
