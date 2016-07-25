@@ -19,7 +19,8 @@
 
 ;; highlight current line
 (when (> (display-color-cells) 8)
-  (global-hl-line-mode t))
+  (global-hl-line-mode t)
+  (set-face-background 'hl-line "black"))
 
 ;; Make emacs frame transparent
 (defun transparency (value)
