@@ -17,11 +17,6 @@
 (column-number-mode t)
 (line-number-mode t)
 
-;; highlight current line
-(when (> (display-color-cells) 8)
-  (global-hl-line-mode t)
-  (set-face-background 'hl-line "black"))
-
 ;; Make emacs frame transparent
 (defun transparency (value)
   "Sets the transparency of the frame window."
@@ -51,4 +46,10 @@
   (powerline-default-theme))
 
 (beacon-mode 1)
+
+;; highlight current line
+(when (> (display-color-cells) 8)
+  (global-hl-line-mode t)
+  (set-face-background 'hl-line "black"))
+
 (provide 'init-ui)
