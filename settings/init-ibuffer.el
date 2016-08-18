@@ -22,6 +22,7 @@
                                (mode . lua-mode)
                                (mode . scala-mode)
                                (mode . java-mode)
+                               (mode . sql-mode)
                                (name . "^\\*R\\*$")
                                (name . "^\\*ein:notebooklist.*\\*$")
                                (name . "^\\*ein:.*ipynb\\*$")
@@ -29,6 +30,8 @@
                                (mode . makefile-mode)))
                ("DocView" (or
                            (mode . doc-view-mode)
+                           (filename . ".*\\.txt")
+                           (mode . markdown-mode)
                            (mode . image-mode)))
                ("Emacs" (or
                          (name . "^\\*scratch\\*$")

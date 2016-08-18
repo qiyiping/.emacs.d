@@ -37,6 +37,7 @@
 (setq ein:use-auto-complete t)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
-
+(add-hook 'inferior-python-mode-hook '(lambda ()
+                                        (local-set-key (kbd "C-l") 'shell-clear)))
 
 (provide 'init-python)
