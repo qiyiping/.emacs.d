@@ -19,7 +19,7 @@
 (add-to-list 'auto-mode-alist '("YBUILD\\'" . python-mode))
 
 (setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "-i")
+      python-shell-interpreter-args "--simple-prompt -i")
 
 (setq python-eldoc-setup-code
   "def __PYDOC_get_help(obj):
