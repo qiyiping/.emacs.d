@@ -6,4 +6,6 @@
              '("\\.\\(md\\|markdown\\)$" . markdown-mode)
              t)
 
+(setq markdown-command "pandoc")
+
 (provide 'init-markdown)
