@@ -38,14 +38,4 @@
   (interactive)
   (insert (read-file-name "File: " "~/kuaipan/paper/")))
 
-;; gscholar-bibtex config
-(require 'gscholar-bibtex)
-(setq gscholar-bibtex-database-file my-bibtex-database)
-(setq gscholar-bibtex-default-source "Google Scholar")
-(global-set-key (kbd "C-c g") 'gscholar-bibtex)
-
-(defun gscholar-bibtex-write-bibtex-to-database ()
-  (interactive)
-  (warn "write-bibtex-to-database is disabled!"))
-
 (provide 'init-bibtex)
