@@ -22,6 +22,8 @@
 (set-fill-column 80)
 
 ;; flyspell
+(ispell-change-dictionary "american" t)
+
 (defvar writing-mode-hooks '(text-mode-hook
                              org-mode-hook))
 
