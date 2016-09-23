@@ -55,6 +55,7 @@
                           zenburn-theme
                           ggtags
                           dictionary
+                          go-mode
                           switch-window
                           lua-mode)
   "A list of packages ensured to be installed at launch.")

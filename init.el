@@ -1,11 +1,7 @@
 ;; load path
 ;; (add-to-list 'load-path "~/.emacs.d/")
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (add-to-list 'load-path "~/.emacs.d/settings/")
@@ -39,3 +35,4 @@
 (require 'init-scala)
 (require 'init-bibtex)
 (require 'init-mail)
+
