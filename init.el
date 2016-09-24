@@ -27,6 +27,7 @@
 (require 'init-python)
 (require 'init-lisp)
 (require 'init-lua)
+(require 'init-go)
 (require 'init-auctex)
 (require 'init-org)
 (require 'init-markdown)
@@ -35,4 +36,3 @@
 (require 'init-scala)
 (require 'init-bibtex)
 (require 'init-mail)
-

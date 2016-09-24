@@ -55,7 +55,10 @@
                           zenburn-theme
                           ggtags
                           dictionary
+                          ;; go programming
                           go-mode
+                          go-eldoc
+                          go-autocomplete
                           switch-window
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
