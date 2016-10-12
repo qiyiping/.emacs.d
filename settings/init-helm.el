@@ -47,6 +47,9 @@
 (add-hook 'eshell-mode-hook '(lambda()
                                (local-set-key (kbd "C-c C-l") 'helm-eshell-history)))
 
+(if (eq system-type 'darwin)
+    (setq helm-man-format-switches "%s"))
+
 (helm-mode 1)
 
 (projectile-global-mode)
