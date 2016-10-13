@@ -60,6 +60,7 @@
                           go-eldoc
                           go-autocomplete
                           switch-window
+                          tldr
                           lua-mode)
   "A list of packages ensured to be installed at launch.")
 
