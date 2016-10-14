@@ -41,7 +41,7 @@
                           multi-term
                           csharp-mode
                           auto-complete-c-headers
-                          scala-mode2
+                          scala-mode
                           sbt-mode
                           dirtree
                           web-mode
