@@ -1,9 +1,18 @@
 ;;; init-ui.el --- user interface settings
 
 ;; Turn off menu/tool/scroll bar
-;; (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;; (when (functionp 'menu-bar-mode)
+;;   (menu-bar-mode -1))
+(when (functionp 'set-scroll-bar-mode)
+  (set-scroll-bar-mode 'nil))
+(when (functionp 'mouse-wheel-mode)
+  (mouse-wheel-mode -1))
+(when (functionp 'tooltip-mode)
+  (tooltip-mode -1))
+(when (functionp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(when (functionp 'blink-cursor-mode)
+  (blink-cursor-mode -1))
 
 ;; supress gui startup message
 (setq inhibit-startup-message t)
@@ -23,8 +32,12 @@
   (interactive "nOpaque degree 0 - 100:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-(require 'color-theme)
 
+(require 'spacemacs-dark-theme)
+(require 'spacemacs-light-theme)
+(require 'spaceline-config)
+
+(require 'color-theme)
 (when window-system
   (transparency 100)
   ;; Set font size
@@ -36,20 +49,26 @@
   (blink-cursor-mode -1)
   (setq x-select-enable-clipboard t)
   ;; color theme
-  ;; alternative choice `color-theme-solarized'
-  (load-theme 'zenburn t)
+  ;; alternative choice `color-theme-solarized' or `zenburn'
+  ;; (load-theme 'zenburn t)
+  (load-theme 'spacemacs-light t)
   ;; toggle full screen
   (toggle-frame-maximized)
   ;; (toggle-frame-fullscreen)
   ;; mode line
   ;; (nyan-mode)
-  (powerline-default-theme))
+  (setq powerline-default-separator 'zigzag
+        spaceline-minor-modes-separator " ")
+  (spaceline-spacemacs-theme)
+  (spaceline-helm-mode)
+  (spaceline-toggle-minor-modes-off))
 
 (beacon-mode 1)
 
 ;; highlight current line
 (when (> (display-color-cells) 8)
   (global-hl-line-mode t)
-  (set-face-background 'hl-line "black"))
+  ;; (set-face-background 'hl-line "black")
+  )
 
 (provide 'init-ui)
