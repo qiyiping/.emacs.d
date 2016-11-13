@@ -42,11 +42,8 @@
   (transparency 100)
   ;; Set font size
   ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
-  (set-face-attribute 'default nil :height 140)
+  (set-face-attribute 'default nil :height 130)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
-  (tooltip-mode -1)
-  (mouse-wheel-mode t)
-  (blink-cursor-mode -1)
   (setq x-select-enable-clipboard t)
   ;; color theme
   ;; alternative choice `color-theme-solarized' or `zenburn'
