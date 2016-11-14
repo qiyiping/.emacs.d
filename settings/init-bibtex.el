@@ -39,6 +39,7 @@
   (insert (read-file-name "File: " "~/kuaipan/paper/")))
 
 ;; google scholar for bibtex retrieval
+(require 'gscholar-bibtex)
 (setq gscholar-bibtex-default-source "Google Scholar")
 (setq gscholar-bibtex-database-file my-bibtex-database)
 
