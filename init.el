@@ -43,7 +43,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists markdown-mode magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc go-autocomplete ggtags exec-path-from-shell ein dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x beacon autopair auto-complete-c-headers auctex anaconda-mode ace-pinyin))))
+    (gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists markdown-mode magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc go-autocomplete ggtags exec-path-from-shell ein dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x beacon autopair auto-complete-c-headers auctex anaconda-mode ace-pinyin))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

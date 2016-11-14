@@ -38,4 +38,26 @@
   (interactive)
   (insert (read-file-name "File: " "~/kuaipan/paper/")))
 
+;; google scholar for bibtex retrieval
+(setq gscholar-bibtex-default-source "Google Scholar")
+(setq gscholar-bibtex-database-file my-bibtex-database)
+
+;; override `gscholar-bibtex-write-bibtex-to-database'
+(defun gscholar-bibtex-write-bibtex-to-database ()
+  (interactive)
+  (gscholar-bibtex--write-bibtex-to-database-impl t))
+
+;; issue: https://github.com/cute-jumper/gscholar-bibtex/issues/10
+(defun gscholar-bibtex--url-retrieve-as-buffer (url)
+  (let* ((url-request-extra-headers
+          `(("User-Agent" . ,gscholar-bibtex-user-agent-string)
+            ("Cookie" . "GSP=ID=87969bbbc5530bab:CF=4")))
+         (response-buffer (url-retrieve-synchronously url)))
+    (with-current-buffer response-buffer
+      (gscholar-bibtex--delete-response-header)
+      (set-buffer-multibyte t))
+    response-buffer))
+
+(global-set-key (kbd "C-c g") 'gscholar-bibtex)
+
 (provide 'init-bibtex)
