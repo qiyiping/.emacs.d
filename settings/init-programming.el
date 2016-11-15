@@ -68,4 +68,8 @@
 (require 'protobuf-mode)
 (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
 
+;; project explorer
+(setq pe/width 30)
+(global-set-key (kbd "C-c e") 'project-explorer-toggle)
+
 (provide 'init-programming)
