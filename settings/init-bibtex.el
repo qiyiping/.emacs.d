@@ -11,21 +11,21 @@
   "~/kuaipan/jabref/notes.org"
   "BibTeX notes")
 
-(setq helm-bibtex-bibliography (list my-bibtex-database))
-(setq helm-bibtex-notes-path my-bibtex-notes)
+(setq bibtex-completion-bibliography (list my-bibtex-database))
+(setq bibtex-completion-notes-path my-bibtex-notes)
 
-(setq helm-bibtex-pdf-field "File")
-(setq helm-bibtex-pdf-symbol "⌘")
-(setq helm-bibtex-notes-symbol "✎")
-(setq helm-bibtex-pdf-open-function 'open-file-externally)
+(setq bibtex-completion-pdf-field "File")
+(setq bibtex-completion-pdf-symbol "⌘")
+(setq bibtex-completion-notes-symbol "✎")
+(setq bibtex-completion-pdf-open-function 'open-file-externally)
 
-(setq helm-bibtex-additional-search-fields '(tags))
+(setq bibtex-completion-additional-search-fields '(tags))
 
-(setq helm-bibtex-format-citation-functions
-      '((org-mode      . helm-bibtex-format-citation-org-link-to-PDF)
-        (latex-mode    . helm-bibtex-format-citation-cite)
-        (markdown-mode . helm-bibtex-format-citation-pandoc-citeproc)
-        (default       . helm-bibtex-format-citation-default)))
+(setq bibtex-completion-format-citation-functions
+  '((org-mode      . bibtex-completion-format-citation-org-link-to-PDF)
+    (latex-mode    . bibtex-completion-format-citation-cite)
+    (markdown-mode . bibtex-completion-format-citation-pandoc-citeproc)
+    (default       . bibtex-completion-format-citation-default)))
 
 ;; basic bibtex-mode setting
 (setq bibtex-align-at-equal-sign t)
