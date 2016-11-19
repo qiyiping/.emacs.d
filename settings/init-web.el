@@ -10,6 +10,17 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
+(defun my-js-mode-settings ()
+  (tern-mode-enable)
+  (tern-ac-setup))
+
+(add-hook 'js2-mode-hook 'my-js-mode-settings)
+
+
 (require 'json)
 
 (provide 'init-web)
