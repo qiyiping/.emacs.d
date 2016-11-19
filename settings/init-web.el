@@ -15,7 +15,7 @@
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 (defun my-js-mode-settings ()
-  (tern-mode-enable)
+  (tern-mode t)
   (tern-ac-setup))
 
 (add-hook 'js2-mode-hook 'my-js-mode-settings)
