@@ -16,7 +16,8 @@
 
 (defun my-js-mode-settings ()
   (tern-mode t)
-  (tern-ac-setup))
+  (tern-ac-setup)
+  (setq js2-basic-offset 2))
 
 (add-hook 'js2-mode-hook 'my-js-mode-settings)
 
