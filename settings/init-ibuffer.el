@@ -23,6 +23,8 @@
                                (mode . scala-mode)
                                (mode . java-mode)
                                (mode . sql-mode)
+                               (mode . js2-mode)
+                               (mode . js2-jsx-mode)
                                (name . "^\\*R\\*$")
                                (name . "^\\*ein:notebooklist.*\\*$")
                                (name . "^\\*ein:.*ipynb\\*$")
