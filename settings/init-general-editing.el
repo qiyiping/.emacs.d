@@ -83,8 +83,8 @@
 
 ;; windmove
 ;; alternative package `windmove':
-;; (windmove-default-keybindings 'meta)
-;; (setq windmove-wrap-around t)
+(windmove-default-keybindings 'meta)
+(setq windmove-wrap-around t)
 (require 'switch-window)
 (global-set-key (kbd "C-x o") 'switch-window)
 
