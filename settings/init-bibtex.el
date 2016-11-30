@@ -34,9 +34,17 @@
           (lambda ()
             (set-fill-column 150)))
 
+;; find paper file path by projectile
+(defvar my-paper-directory
+  "/Users/qiyiping/kuaipan/paper/"
+  "Paper directory")
+
 (defun my-insert-pdf-path ()
   (interactive)
-  (insert (read-file-name "File: " "~/kuaipan/paper/")))
+  (let ((default-directory my-paper-directory))
+    (let ((file (projectile-completing-read "Find file: "
+                                      (projectile-current-project-files))))
+      (insert (expand-file-name file (projectile-project-root))))))
 
 ;; google scholar for bibtex retrieval
 (require 'gscholar-bibtex)
