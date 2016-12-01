@@ -13,7 +13,7 @@
 #+HTML_LINK_HOME:
 #+HTML_LINK_UP:
 #+HTML_MATHJAX:
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/css/worg.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/static/css/worg.css" />
 #+HTML_HEAD_EXTRA:
 #+SUBTITLE:
 #+INFOJS_OPT:

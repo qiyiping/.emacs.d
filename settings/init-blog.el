@@ -69,6 +69,20 @@
       (mkdir post-dir))
     (unless (file-exists-p post-date-dir)
       (mkdir post-date-dir))
-    (find-file (expand-file-name
-                post-file-name
-                post-date-dir))))
+    (let* ((post-buffer (find-file
+                         (expand-file-name
+                          post-file-name
+                          post-date-dir))))
+      (insert (concat "#+SETUPFILE: "
+                      my-site-common-resource
+                      "templates/post-template.setup\n"))
+      (insert (format "#+TITLE: %s\n#+KEYWORDS: %s\n"
+                      title
+                      keywords)))))
+
+(setq httpd-root my-site-publishing-directory)
+
+(defun my-site-http-start ()
+  (interactive)
+  (httpd-start)
+  (browse-url "http://localhost:8080/sitemap.html"))
