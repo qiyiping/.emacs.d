@@ -17,7 +17,7 @@
 
 
 (setq org-publish-project-alist
-      (list                             ; https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html
+      (list
        `("site-pages"
          :base-directory ,my-site-org-source
          :base-extension "org"
@@ -28,6 +28,14 @@
          :auto-sitemap t
          :sitemap-title "Sitemap"
          :sitemap-style 'tree
+         :html-preamble "<div>
+<a href=\"/index.html\">Home</a>
+<a href=\"/sitemap.html\">SiteMap</a>
+<a href=\"/about/index.html\">About</a>
+<a href=\"https://github.com/qiyiping\">Github</a>
+</div>"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/worg.css\"/>"
+         :html-postamble nil
          )
        `("common-static"
          :base-directory ,my-site-common-resource
@@ -73,12 +81,15 @@
                          (expand-file-name
                           post-file-name
                           post-date-dir))))
-      (insert (concat "#+SETUPFILE: "
-                      my-site-common-resource
-                      "templates/post-template.setup\n"))
-      (insert (format "#+TITLE: %s\n#+KEYWORDS: %s\n"
-                      title
-                      keywords)))))
+      (insert (format
+               "#+SETUPFILE: %s
+#+TITLE: %s
+#+KEYWORDS: %s
+"
+               (concat my-site-common-resource
+                       "templates/post-template.setup")
+               title
+               keywords)))))
 
 (setq httpd-root my-site-publishing-directory)
 

@@ -4,7 +4,7 @@
 #+OPTIONS: email:nil f:t inline:t num:nil p:nil pri:nil prop:nil stat:t
 #+OPTIONS: tags:t tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
 #+OPTIONS: html-link-use-abs-url:nil html-postamble:nil
-#+OPTIONS: html-preamble:t html-scripts:t html-style:t
+#+OPTIONS: html-scripts:nil html-style:nil
 #+OPTIONS: html5-fancy:nil tex:t
 #+HTML_DOCTYPE: xhtml-strict
 #+HTML_CONTAINER: div
