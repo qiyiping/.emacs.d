@@ -40,4 +40,13 @@
 (add-hook 'inferior-python-mode-hook '(lambda ()
                                         (local-set-key (kbd "C-l") 'shell-clear)))
 
+(defun my-launch-jupyter-notebook ()
+  (interactive)
+  (if (not (comint-check-proc "*jupyter*"))
+      (set-buffer (apply 'make-comint
+                         "jupyter"
+                         "jupyter"
+                         nil
+                         '("notebook" "--no-browser")))))
+
 (provide 'init-python)
