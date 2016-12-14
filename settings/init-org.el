@@ -21,7 +21,9 @@
   (setq org-latex-pdf-process
         '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
   (add-to-list 'org-latex-packages-alist
-               '("" "xeCJK" t)))
+               '("" "xeCJK" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "amsmath, amssymb, amsthm" t)))
 
 (add-hook 'org-mode-hook 'my-org-mode-hook)
 
