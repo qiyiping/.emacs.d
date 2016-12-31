@@ -1,7 +1,7 @@
 ;; load path
 ;; (add-to-list 'load-path "~/.emacs.d/")
 
-(package-initialize)
+;; (package-initialize)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
