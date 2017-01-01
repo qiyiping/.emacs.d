@@ -11,6 +11,11 @@
 
 (setq query-replace-highlight t)
 
+;; setup keybind for `set-mark-command' in windows
+(when (eq system-type 'windows-nt)
+  (global-unset-key (kbd "C-SPC"))
+  (global-set-key (kbd "M-SPC") 'set-mark-command))
+
 ;; Uniquify buffer name display
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
