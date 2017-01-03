@@ -9,6 +9,9 @@
 
 (package-initialize)
 
-(package-install-selected-packages)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; (package-install-selected-packages)
 
 (provide 'init-package)
