@@ -41,10 +41,17 @@
 
 (defun my-insert-pdf-path ()
   (interactive)
-  (let ((default-directory my-paper-directory))
-    (let ((file (projectile-completing-read "Find file: "
-                                      (projectile-current-project-files))))
-      (insert (expand-file-name file (projectile-project-root))))))
+  (let* ((default-directory my-paper-directory)
+         (file (projectile-completing-read "Find file: "
+                                           (projectile-current-project-files))))
+    (insert (expand-file-name file (projectile-project-root)))))
+
+(defun my-read-paper ()
+  (interactive)
+  (let* ((default-directory my-paper-directory)
+         (file (projectile-completing-read "Find file: "
+                                           (projectile-current-project-files))))
+    (open-file-externally (expand-file-name file (projectile-project-root)))))
 
 ;; google scholar for bibtex retrieval
 (require 'gscholar-bibtex)
