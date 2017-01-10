@@ -68,4 +68,7 @@
   ;; (set-face-background 'hl-line "black")
   )
 
+;; mechanical keyborad sound for fun
+(selectric-mode -1)
+
 (provide 'init-ui)
