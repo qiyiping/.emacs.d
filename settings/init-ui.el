@@ -69,6 +69,6 @@
   )
 
 ;; mechanical keyborad sound for fun
-(selectric-mode -1)
+;; (selectric-mode -1)
 
 (provide 'init-ui)
