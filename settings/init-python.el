@@ -34,12 +34,16 @@
   )
 
 ;; ein
+(setq ein:completion-backend 'ein:use-ac-jedi-backend)
 (setq ein:use-auto-complete t)
-(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+
+;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
 (add-hook 'inferior-python-mode-hook '(lambda ()
                                         (local-set-key (kbd "C-l") 'shell-clear)))
 
+(setq ein:jupyter-default-server-command "/usr/local/bin/jupyter")
+;; use `ein:jupyter-server-start'
 (defun my-launch-jupyter-notebook ()
   (interactive)
   (if (not (comint-check-proc "*jupyter*"))
