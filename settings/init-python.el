@@ -34,6 +34,7 @@
   )
 
 ;; ein
+(require 'ein-connect)
 (setq ein:completion-backend 'ein:use-ac-jedi-backend)
 (setq ein:use-auto-complete t)
 
