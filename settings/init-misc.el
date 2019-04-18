@@ -19,7 +19,9 @@
 (setq calendar-holidays cal-china-x-important-holidays)
 
 ;; Dictionary
-(global-set-key (kbd "C-c d") 'dictionary-lookup-definition)
+(if (eq system-type 'darwin)
+    (global-set-key (kbd "C-c d") 'osx-dictionary-search-pointer)
+  (global-set-key (kbd "C-c d") 'dictionary-lookup-definition))
 (setq dictionary-default-dictionary "wn")
 
 ;; Tramp

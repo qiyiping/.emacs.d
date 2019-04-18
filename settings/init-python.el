@@ -21,17 +21,17 @@
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "--simple-prompt -i")
 
-(setq python-eldoc-setup-code
-  "def __PYDOC_get_help(obj):
-    try:
-        doc = help(obj)
-    except:
-        doc = ''
-    try:
-        exec('print doc')
-    except SyntaxError:
-        print(doc)"
-  )
+;; (setq python-eldoc-setup-code
+;;   "def __PYDOC_get_help(obj):
+;;     try:
+;;         doc = help(obj)
+;;     except:
+;;         doc = ''
+;;     try:
+;;         exec('print doc')
+;;     except SyntaxError:
+;;         print(doc)"
+;;   )
 
 ;; ein
 (require 'ein-connect)

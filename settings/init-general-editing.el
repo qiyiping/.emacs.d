@@ -99,6 +99,7 @@
   "ace-jump-mode"
   "Emacs quick move minor mode"
   t)
+(setq ace-pinyin-use-avy nil)
 (ace-pinyin-global-mode 1)
 (define-key global-map (kbd "C-c :") 'ace-jump-char-mode)
 (define-key global-map (kbd "C-:") 'ace-jump-mode)
