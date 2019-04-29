@@ -12,7 +12,7 @@
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 
 ;; virtualenvwrapper
-(setq venv-location "~/.virtualenv/")
+(setq venv-location "~/.virtualenvs/")
 
 ;; `auto-mode-alist' for python
 (add-to-list 'auto-mode-alist '("SConstruct\\'" . python-mode))
