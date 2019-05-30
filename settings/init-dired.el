@@ -2,7 +2,7 @@
 
 (require 'dired)
 (require 'dired-x)
-(require 'dired+)
+;; (require 'dired+)
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-dwim-target t)
 (setq dired-listing-switches "-lah")
