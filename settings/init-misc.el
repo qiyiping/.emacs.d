@@ -24,6 +24,10 @@
   (global-set-key (kbd "C-c d") 'dictionary-lookup-definition))
 (setq dictionary-default-dictionary "wn")
 
+
+;; cheat.sh
+(global-set-key (kbd "C-c c") 'cheat-sh)
+
 ;; Tramp
 (require 'tramp)
 (setq tramp-default-method "ssh")
