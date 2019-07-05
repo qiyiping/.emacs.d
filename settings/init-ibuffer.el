@@ -35,6 +35,8 @@
                            (filename . ".*\\.txt")
                            (mode . markdown-mode)
                            (mode . image-mode)))
+               ("Web" (or
+                       (mode . eww-mode)))
                ("Emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
