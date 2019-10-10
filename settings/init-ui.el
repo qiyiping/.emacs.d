@@ -37,7 +37,7 @@
 (require 'spacemacs-light-theme)
 (require 'spaceline-config)
 
-(require 'color-theme)
+;; (require 'color-theme)
 (when window-system
   (transparency 100)
   ;; Set font size

@@ -1,11 +1,11 @@
 ;;; init-package.el --- set up the package manager
 
-;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("org"   . "http://elpa.emacs-china.org/org/")
-                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+;; (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+;;                          ("org"   . "http://elpa.emacs-china.org/org/")
+;;                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 
 (package-initialize)
 
