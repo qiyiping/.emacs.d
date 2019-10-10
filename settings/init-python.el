@@ -4,12 +4,14 @@
 ;; http://tkf.github.io/emacs-jedi/latest/
 ;; requirement
 ;; python package: jedi, epc, virtualenv
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 
 ;; anaconda-mode
-;; (add-hook 'python-mode-hook 'anaconda-mode)
-;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(eval-after-load "company"
+ '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
 ;; virtualenvwrapper
 (setq venv-location "~/.virtualenvs/")
@@ -35,23 +37,22 @@
 
 ;; ein
 (require 'ein-connect)
-(setq ein:completion-backend 'ein:use-ac-jedi-backend)
-(setq ein:use-auto-complete t)
-
-;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+(setq ein:completion-backend 'ein:use-company-backend)
 
 (add-hook 'inferior-python-mode-hook '(lambda ()
                                         (local-set-key (kbd "C-l") 'shell-clear)))
 
 (setq ein:jupyter-default-server-command "/usr/local/bin/jupyter")
+
+;; deprecated
 ;; use `ein:jupyter-server-start'
-(defun my-launch-jupyter-notebook ()
-  (interactive)
-  (if (not (comint-check-proc "*jupyter*"))
-      (set-buffer (apply 'make-comint
-                         "jupyter"
-                         "jupyter"
-                         nil
-                         '("notebook" "--no-browser")))))
+;; (defun my-launch-jupyter-notebook ()
+;;   (interactive)
+;;   (if (not (comint-check-proc "*jupyter*"))
+;;       (set-buffer (apply 'make-comint
+;;                          "jupyter"
+;;                          "jupyter"
+;;                          nil
+;;                          '("notebook" "--no-browser")))))
 
 (provide 'init-python)

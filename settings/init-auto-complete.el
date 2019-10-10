@@ -1,18 +1,20 @@
 ;; init-auto-complete.el --- auto-complete settings
 
-;; how to enable ac in major-mode?
-;; add major-mode to `ac-modes'
-;; setup `ac-source' for the major-mode
+(add-hook 'after-init-hook 'global-company-mode)
 
-(require 'auto-complete-config)
-(ac-config-default)
+;; ;; how to enable ac in major-mode?
+;; ;; add major-mode to `ac-modes'
+;; ;; setup `ac-source' for the major-mode
 
-(require 'auto-complete-c-headers)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 
-(defun my-ac-cc-mode-setup ()
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'ac-sources 'ac-source-yasnippet))
+;; (require 'auto-complete-c-headers)
 
-(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;; (defun my-ac-cc-mode-setup ()
+;;   (add-to-list 'ac-sources 'ac-source-c-headers)
+;;   (add-to-list 'ac-sources 'ac-source-yasnippet))
+
+;; (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
 
 (provide 'init-auto-complete)
