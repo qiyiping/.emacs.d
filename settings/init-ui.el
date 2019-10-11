@@ -60,15 +60,14 @@
   ;; toggle full screen
   (toggle-frame-maximized)
   ;; (toggle-frame-fullscreen)
+  ;; highlight current line
+  (when (> (display-color-cells) 8)
+    (global-hl-line-mode t)
+    ;; (set-face-background 'hl-line "black")
+    )
   )
 
 (beacon-mode 1)
-
-;; highlight current line
-(when (> (display-color-cells) 8)
-  (global-hl-line-mode t)
-  ;; (set-face-background 'hl-line "black")
-  )
 
 ;; mechanical keyborad sound for fun
 ;; (selectric-mode -1)
