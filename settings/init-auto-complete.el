@@ -1,6 +1,17 @@
 ;; init-auto-complete.el --- auto-complete settings
 
-(add-hook 'after-init-hook 'global-company-mode)
+(defun my-company-mode-setup ()
+  (setq company-idle-delay 0.5)
+  (setq company-show-numbers t)
+  (setq company-tooltip-limit 10)
+  (setq company-minimum-prefix-length 2)
+  (setq company-tooltip-align-annotations t)
+  (setq company-tooltip-flip-when-above t)
+  (global-company-mode 1)
+  ;; (company-quickhelp-mode)
+  )
+
+(add-hook 'after-init-hook 'my-company-mode-setup)
 
 ;; ;; how to enable ac in major-mode?
 ;; ;; add major-mode to `ac-modes'
