@@ -37,7 +37,19 @@
 (require 'spacemacs-light-theme)
 (require 'spaceline-config)
 
-;; (require 'color-theme)
+;; color theme
+;; alternative choice `color-theme-solarized' or `zenburn'
+;; (load-theme 'zenburn t)
+(load-theme 'spacemacs-light t)
+
+;; mode line
+;; (nyan-mode)
+(setq powerline-default-separator 'zigzag
+      spaceline-minor-modes-separator " ")
+(spaceline-spacemacs-theme)
+(spaceline-helm-mode)
+(spaceline-toggle-minor-modes-off)
+
 (when window-system
   (transparency 100)
   ;; Set font size
@@ -45,20 +57,10 @@
   (set-face-attribute 'default nil :height 150)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (setq x-select-enable-clipboard t)
-  ;; color theme
-  ;; alternative choice `color-theme-solarized' or `zenburn'
-  ;; (load-theme 'zenburn t)
-  (load-theme 'spacemacs-light t)
   ;; toggle full screen
   (toggle-frame-maximized)
   ;; (toggle-frame-fullscreen)
-  ;; mode line
-  ;; (nyan-mode)
-  (setq powerline-default-separator 'zigzag
-        spaceline-minor-modes-separator " ")
-  (spaceline-spacemacs-theme)
-  (spaceline-helm-mode)
-  (spaceline-toggle-minor-modes-off))
+  )
 
 (beacon-mode 1)
 
