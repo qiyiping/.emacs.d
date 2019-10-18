@@ -32,6 +32,12 @@
 (setq leetcode-prefer-language "python3")
 (setq leetcode-prefer-sql "mysql")
 
+(defun select-random-leetcode-problem ()
+  (interactive)
+  (let ((number-of-lines (line-number-at-pos (point-max))))
+    (goto-line (+ 1 (random number-of-lines)))
+    (leetcode-show-current-problem)))
+
 ;; Tramp
 (require 'tramp)
 (setq tramp-default-method "ssh")
