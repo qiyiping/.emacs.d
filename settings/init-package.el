@@ -5,7 +5,7 @@
 
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("org"   . "http://elpa.emacs-china.org/org/")
-                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")))
 
 (package-initialize)
 

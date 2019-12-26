@@ -54,7 +54,7 @@
   (transparency 100)
   ;; Set font size
   ;; Use 'C-x C-+'/'C-x C--' to adjust the font size
-  (set-face-attribute 'default nil :height 150)
+  (set-face-attribute 'default nil :height 170)
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (setq x-select-enable-clipboard t)
   ;; toggle full screen
