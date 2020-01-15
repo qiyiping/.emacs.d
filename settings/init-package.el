@@ -3,9 +3,15 @@
 ;; (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
 ;;                          ("melpa" . "https://melpa.org/packages/")))
 
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("org"   . "http://elpa.emacs-china.org/org/")
-                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")))
+(setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
+                         ("org" . "http://elpa.emacs-china.org/org/")
+                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")
+			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+
+(setq package-archive-priorities '(("gnu" . 10)
+				   ("melpa-stable" . 7)
+				   ("org" . 5)
+				   ("melpa" . 1)))
 
 (package-initialize)
 

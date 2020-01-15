@@ -32,18 +32,16 @@
   (interactive "nOpaque degree 0 - 100:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-
-(require 'spacemacs-dark-theme)
-(require 'spacemacs-light-theme)
-(require 'spaceline-config)
-
 ;; color theme
 ;; alternative choice `color-theme-solarized' or `zenburn'
-;; (load-theme 'zenburn t)
-(load-theme 'spacemacs-light t)
+(load-theme 'zenburn t)
+;; (require 'spacemacs-dark-theme)
+;; (require 'spacemacs-light-theme)
+;; (load-theme 'spacemacs-light t)
 
 ;; mode line
 ;; (nyan-mode)
+(require 'spaceline-config)
 (setq powerline-default-separator 'zigzag
       spaceline-minor-modes-separator " ")
 (spaceline-spacemacs-theme)
