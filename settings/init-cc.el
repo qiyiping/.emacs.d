@@ -22,6 +22,7 @@
   (google-set-c-style))
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-settings)
+(add-hook 'c-mode-common-hook #'lsp)
 
 ;; some useful keybindings in cc-mode:
 ;; C-M-h (c-mark-function)
