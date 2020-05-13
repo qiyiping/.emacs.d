@@ -72,4 +72,8 @@
 (setq pe/width 30)
 (global-set-key (kbd "C-c e") 'project-explorer-toggle)
 
+
+;; ;; lsp mode default settings
+;; (setq lsp-ui-sideline-delay 1.0)
+
 (provide 'init-programming)
