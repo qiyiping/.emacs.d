@@ -8,13 +8,13 @@
 ;; (setq jedi:complete-on-dot t)
 
 ;; anaconda-mode
-;; (add-hook 'python-mode-hook 'anaconda-mode)
-;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-;; (eval-after-load "company"
-;;   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(eval-after-load "company"
+  '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
-;; lsp mode
-(add-hook 'python-mode-hook #'lsp)
+;; ;; lsp mode
+;; (add-hook 'python-mode-hook #'lsp)
 
 ;; virtualenvwrapper
 (setq venv-location "~/.virtualenvs/")
