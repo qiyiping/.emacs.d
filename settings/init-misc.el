@@ -24,6 +24,8 @@
   (global-set-key (kbd "C-c d") 'dictionary-lookup-definition))
 (setq dictionary-default-dictionary "wn")
 
+;; Default directory
+(setq default-directory "/Users/qiyiping/")
 
 ;; cheat.sh
 (global-set-key (kbd "C-c c") 'cheat-sh)
