@@ -8,7 +8,8 @@
   (setq company-tooltip-align-annotations t)
   (setq company-tooltip-flip-when-above t)
   (global-company-mode 1)
-  ;; (company-quickhelp-mode)
+  (company-quickhelp-mode)
+  (setq company-quickhelp-delay 1.0)
   )
 
 (add-hook 'after-init-hook 'my-company-mode-setup)
