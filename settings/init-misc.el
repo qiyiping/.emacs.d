@@ -50,6 +50,9 @@
 (require 'server)
 (unless (server-running-p) (server-start))
 
+;; google
+(google-this-mode 1)
+
 ;; browser support
 (global-set-key [f8] 'browse-url-at-point)
 
