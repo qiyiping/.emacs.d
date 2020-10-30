@@ -25,7 +25,7 @@
 (setq dictionary-default-dictionary "wn")
 
 ;; Default directory
-(setq default-directory "/Users/qiyiping/")
+(setq default-directory "~/")
 
 ;; cheat.sh
 (global-set-key (kbd "C-c c") 'cheat-sh)
