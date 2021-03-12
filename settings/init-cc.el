@@ -59,4 +59,10 @@
 (add-hook 'c-mode-common-hook '(lambda ()
                                  (local-set-key (kbd "C-x C-o") 'ff-find-other-file)))
 
+
+;; bazel mode
+(add-to-list 'auto-mode-alist '("/BUILD\\(\\..*\\)?\\'" . bazel-mode))
+(add-to-list 'auto-mode-alist '("/WORKSPACE\\'" . bazel-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(BUILD\\|WORKSPACE\\|bzl\\)\\'" . bazel-mode))
+
 (provide 'init-cc)
