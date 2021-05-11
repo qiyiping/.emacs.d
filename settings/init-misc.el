@@ -30,6 +30,9 @@
 ;; cheat.sh
 (global-set-key (kbd "C-c c") 'cheat-sh)
 
+;; which-key-mode
+(which-key-mode)
+
 ;; leatcode.el
 (setq leetcode-prefer-language "python3")
 (setq leetcode-prefer-sql "mysql")
