@@ -1,5 +1,11 @@
 ;;; init-rust.el rust lang settings
 
+;; requirements:
+;; rust language server - https://github.com/rust-lang/rls
+;;     rustup update
+;;     rustup component add rls rust-analysis rust-src
+
+
 (require 'rust-mode)
 
 (add-hook 'rust-mode-hook
