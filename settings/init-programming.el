@@ -42,6 +42,7 @@
 
 ;; imenu settings
 (setq-default imenu-auto-rescan t)
+
 ;; (defvar programming-imenu-positions
 ;;   '()
 ;;   "imenu jump stack")
@@ -75,5 +76,7 @@
 
 ;; ;; lsp mode default settings
 ;; (setq lsp-ui-sideline-delay 1.0)
+
+(require 'eglot)
 
 (provide 'init-programming)
