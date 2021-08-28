@@ -24,6 +24,9 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-settings)
 ;; (add-hook 'c-mode-common-hook #'lsp)
 
+(add-to-list 'eglot-server-programs
+             '((c++-mode c-mode) "clangd"))
+
 ;; some useful keybindings in cc-mode:
 ;; C-M-h (c-mark-function)
 ;; C-c C-c (comment-region)
