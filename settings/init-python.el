@@ -27,7 +27,7 @@
       python-shell-interpreter-args "--simple-prompt -i")
 
 ;; ein
-(require 'ein-connect)
+(require 'ein)
 (setq ein:completion-backend 'ein:use-company-backend)
 
 (add-hook 'inferior-python-mode-hook '(lambda ()

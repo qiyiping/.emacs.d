@@ -2,9 +2,11 @@
 
 (global-font-lock-mode t)
 
-(require 'autopair)
-(setq autopair-autowrap t)
-(autopair-global-mode t)
+;; (require 'autopair)
+;; (setq autopair-autowrap t)
+;; (autopair-global-mode t)
+
+(electric-pair-mode t)
 
 (show-paren-mode t)
 (setq show-paren-style 'parenthesis)
