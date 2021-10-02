@@ -40,7 +40,7 @@
 ;; (load-theme 'spacemacs-light t)
 
 ;; mode line
-;; (nyan-mode)
+(nyan-mode)
 (require 'spaceline-config)
 (setq powerline-default-separator 'zigzag
       spaceline-minor-modes-separator " ")
