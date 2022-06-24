@@ -78,5 +78,6 @@
 ;; (setq lsp-ui-sideline-delay 1.0)
 
 (require 'eglot)
+(setq eglot-ignored-server-capabilites '(:documentHighlightProvider))
 
 (provide 'init-programming)

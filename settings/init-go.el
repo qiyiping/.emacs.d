@@ -10,6 +10,6 @@
 
 (add-hook 'go-mode-hook 'my-go-mode-setup)
 
-(require 'go-autocomplete)
+;; (require 'go-autocomplete)
 
 (provide 'init-go)
