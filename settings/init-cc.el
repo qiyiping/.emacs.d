@@ -17,8 +17,8 @@
   (c-toggle-auto-newline -1)
   (setq indent-tabs-mode nil)
   (my-c-mode-hs-settings)
-  (ggtags-mode 1)
-  (define-key ggtags-mode-map (kbd "M-*") 'pop-tag-mark)
+  ;; (ggtags-mode 1)
+  ;; (define-key ggtags-mode-map (kbd "M-*") 'pop-tag-mark)
   (google-set-c-style))
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-settings)
@@ -73,5 +73,6 @@
 ;; cmake mode
 (add-to-list 'auto-mode-alist '("CMakeLists\\.txt\\'" . cmake-mode))
 (add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
+(add-hook 'cmake-mode 'eglot-ensure)
 
 (provide 'init-cc)
