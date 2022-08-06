@@ -103,8 +103,8 @@
   t)
 (setq ace-pinyin-use-avy nil)
 (ace-pinyin-global-mode 1)
-(define-key global-map (kbd "C-:") 'ace-jump-char-mode)
-(define-key global-map (kbd "C-c :") 'ace-jump-mode)
+(define-key global-map (kbd "C-x j") 'ace-jump-char-mode)
+(define-key global-map (kbd "C-x :") 'ace-jump-mode)
 
 ;; swiper
 (ivy-mode 1)
