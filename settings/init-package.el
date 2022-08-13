@@ -4,10 +4,10 @@
 ;;                          ("melpa" . "https://melpa.org/packages/")
 ;;                          ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
-(setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
-                         ("org" . "http://elpa.emacs-china.org/org/")
-                         ("melpa-stable" . "http://elpa.emacs-china.org/stable-melpa/")
-			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+(setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                         ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (setq package-archive-priorities '(("gnu" . 10)
 				   ("melpa-stable" . 7)
