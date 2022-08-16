@@ -37,6 +37,7 @@
                            (mode . doc-view-mode)
                            (filename . ".*\\.txt")
                            (mode . markdown-mode)
+                           (mode . rst-mode)
                            (mode . image-mode)))
                ("Web" (or
                        (mode . eww-mode)))
