@@ -27,6 +27,8 @@
     (dired-find-file)))
 (define-key dired-mode-map "\r" 'my-dired-find-file)
 
+(define-key dired-mode-map (kbd "k") 'dired-kill-subdir)
+
 
 (require 'dirtree)
 
