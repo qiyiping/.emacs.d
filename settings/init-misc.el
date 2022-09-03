@@ -43,6 +43,9 @@
     (goto-line (+ 1 (random number-of-lines)))
     (leetcode-show-current-problem)))
 
+(setq leetcode-save-solutions t)
+(setq leetcode-directory "~/.leetcode")
+
 ;; Tramp
 (require 'tramp)
 (setq tramp-default-method "ssh")
