@@ -12,6 +12,10 @@
           (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'rust-mode-hook 'cargo-minor-mode)
 
+(add-to-list 'eglot-server-programs
+             '(rust-mode "rust-analyzer"))
+(add-hook 'rust-mode-hook 'eglot-ensure)
+
 (setq rust-format-on-save t)
 
 (provide 'init-rust)
