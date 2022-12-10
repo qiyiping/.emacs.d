@@ -8,7 +8,7 @@
 ;; C-j - create a new file named with the text you entered
 ;; while using `c-x c-f' to open file, use `c-x d' to open dir
 (ido-mode t)
-(ido-ubiquitous t)
+(ido-everywhere t)
 
 (setq ido-enable-flex-matching t
       ido-auto-merge-work-directories-length 0

@@ -25,9 +25,9 @@
 
 ;; language servers
 ;; (add-hook 'c-mode-common-hook #'lsp)
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
+;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+;; (add-hook 'c-mode-hook 'eglot-ensure)
+;; (add-hook 'c++-mode-hook 'eglot-ensure)
 
 ;; some useful keybindings in cc-mode:
 ;; C-M-h (c-mark-function)

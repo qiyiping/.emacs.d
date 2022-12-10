@@ -7,14 +7,14 @@
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (setq jedi:complete-on-dot t)
 
-;; ;; anaconda-mode
-;; (add-hook 'python-mode-hook 'anaconda-mode)
-;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-;; (eval-after-load "company"
-;;   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+;; anaconda-mode
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+(eval-after-load "company"
+  '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
 ;; language server
-(add-hook 'python-mode-hook 'eglot-ensure)
+;; (add-hook 'python-mode-hook 'eglot-ensure)
 
 ;; virtualenvwrapper
 (setq venv-location "~/.virtualenvs/")

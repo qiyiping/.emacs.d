@@ -33,7 +33,8 @@
   (setq indent-tabs-mode nil)
   (setq show-trailing-whitespace t)
   (rainbow-delimiters-mode t)
-  (idle-highlight-mode t))
+  ;; (idle-highlight-mode t)
+  )
 
 (if (> emacs-major-version 23)
     (add-hook 'prog-mode-hook 'programming-common-settings)

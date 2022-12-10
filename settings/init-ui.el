@@ -34,10 +34,11 @@
 
 ;; color theme
 ;; alternative choice `color-theme-solarized' or `zenburn'
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+;; (color-theme-sanityinc-solarized-light)
 ;; (require 'spacemacs-dark-theme)
 ;; (require 'spacemacs-light-theme)
-;; (load-theme 'spacemacs-light t)
+;; (load-theme 'spacemacs-dark t)
 
 ;; mode line
 (nyan-mode)
@@ -65,7 +66,7 @@
     )
   )
 
-(beacon-mode 1)
+;; (beacon-mode 1)
 
 ;; mechanical keyborad sound for fun
 ;; (selectric-mode -1)
