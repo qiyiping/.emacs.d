@@ -9,8 +9,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (solarized-theme color-theme-sanityinc-solarized transient eglot which-key cargo rust-mode bazel-mode google-this go-autocomplete ess leetcode helm company-quickhelp company-anaconda youdao-dictionary jedi-core hackernews cheat-sh osx-dictionary avy ace-jump-mode ag helm-ag yasnippet-snippets cmake-mode sr-speedbar markdown-toc yaml-mode helm-dash dash-at-point xkcd selectric-mode skewer-mode js2-refactor web-beautify tern-auto-complete tern js-comint js2-mode project-explorer gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc ggtags exec-path-from-shell dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x auctex anaconda-mode ace-pinyin))))
+   '(solarized-theme color-theme-sanityinc-solarized transient eglot which-key cargo rust-mode bazel-mode google-this go-autocomplete ess leetcode helm company-quickhelp company-anaconda youdao-dictionary jedi-core hackernews cheat-sh osx-dictionary avy ace-jump-mode ag helm-ag yasnippet-snippets cmake-mode sr-speedbar markdown-toc yaml-mode helm-dash dash-at-point xkcd selectric-mode skewer-mode js2-refactor web-beautify tern-auto-complete tern js-comint js2-mode project-explorer gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc ggtags exec-path-from-shell dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x auctex anaconda-mode ace-pinyin))
+ '(warning-suppress-types '((emacs) (ein) (comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,8 +31,8 @@
 (require 'init-ibuffer)
 (require 'init-shell)
 (require 'init-dired)
-(require 'init-ido)
-;; (require 'init-helm)
+;; (require 'init-ido)
+(require 'init-helm)
 (require 'init-isearch)
 (require 'init-general-editing)
 (require 'init-programming)
