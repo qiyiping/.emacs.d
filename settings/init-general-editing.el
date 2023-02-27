@@ -24,6 +24,11 @@
 
 (transient-mark-mode t)
 
+;; narrowing settings
+(put 'narrow-to-defun  'disabled nil)
+(put 'narrow-to-page   'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+
 ;; auto fill
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-fill-column 80)
