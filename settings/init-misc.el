@@ -59,6 +59,9 @@
 ;; google
 (google-this-mode 1)
 
+;; reddit
+(setq md4rd-subs-active '(emacs china china_irl))
+
 ;; browser support
 (global-set-key [f8] 'browse-url-at-point)
 
