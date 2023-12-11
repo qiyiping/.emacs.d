@@ -45,7 +45,8 @@
 (require 'spaceline-config)
 (setq powerline-default-separator 'zigzag
       spaceline-minor-modes-separator " ")
-(spaceline-spacemacs-theme)
+;; (load-theme 'zenburn t)
+;; (spaceline-spacemacs-theme)
 (spaceline-helm-mode)
 (spaceline-toggle-minor-modes-off)
 

@@ -8,15 +8,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (sanityinc-solarized-light)))
+ '(custom-enabled-themes '(sanityinc-solarized-light))
  '(custom-safe-themes
-   (quote
-    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+   '("4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
  '(package-selected-packages
-   (quote
-    (reddigg md4rd csv-mode solarized-theme color-theme-sanityinc-solarized transient eglot which-key cargo rust-mode bazel-mode google-this go-autocomplete ess leetcode helm company-quickhelp company-anaconda youdao-dictionary jedi-core hackernews cheat-sh osx-dictionary avy ace-jump-mode ag helm-ag yasnippet-snippets cmake-mode sr-speedbar markdown-toc yaml-mode helm-dash dash-at-point xkcd selectric-mode skewer-mode js2-refactor web-beautify tern-auto-complete tern js-comint js2-mode project-explorer gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc ggtags exec-path-from-shell dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x auctex anaconda-mode ace-pinyin)))
- '(warning-suppress-log-types (quote ((comp) (emacs) (ein) (comp) (comp))))
- '(warning-suppress-types (quote ((js2-mode) (comp) (emacs) (ein) (comp) (comp)))))
+   '(cheat-sh reddigg md4rd csv-mode solarized-theme color-theme-sanityinc-solarized transient eglot which-key cargo rust-mode bazel-mode google-this go-autocomplete ess leetcode helm company-quickhelp company-anaconda youdao-dictionary jedi-core hackernews osx-dictionary avy ace-jump-mode ag helm-ag yasnippet-snippets cmake-mode sr-speedbar markdown-toc yaml-mode helm-dash dash-at-point xkcd selectric-mode skewer-mode js2-refactor web-beautify tern-auto-complete tern js-comint js2-mode project-explorer gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc ggtags exec-path-from-shell dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x auctex anaconda-mode ace-pinyin))
+ '(warning-suppress-log-types '((comp) (emacs) (ein) (comp) (comp)))
+ '(warning-suppress-types '((js2-mode) (comp) (emacs) (ein) (comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
