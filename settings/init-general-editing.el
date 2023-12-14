@@ -80,6 +80,7 @@
 ;; C-x u -> `undo-tree-visualize'
 (require 'undo-tree)
 (global-undo-tree-mode)
+(setq undo-tree-auto-save-history nil)
 
 ;; Revert buffer w/o confirm
 (defun revert-buffer-no-confirm ()
