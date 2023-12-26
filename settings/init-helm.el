@@ -3,7 +3,6 @@
 ;; http://tuhdo.github.io/helm-intro.html
 
 (require 'helm)
-(require 'helm-config)
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
@@ -50,10 +49,10 @@
 (if (eq system-type 'darwin)
     (setq helm-man-format-switches "%s"))
 
-(helm-mode 1)
-
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
+
+(helm-mode 1)
 
 (provide 'init-helm)

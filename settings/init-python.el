@@ -32,6 +32,6 @@
 
 (add-hook 'inferior-python-mode-hook '(lambda ()
                                         (local-set-key (kbd "C-l") 'shell-clear)))
-(setq ein:jupyter-default-server-command "jupyter")
+(setq ein:jupyter-server-use-subcommand "server")
 
 (provide 'init-python)
