@@ -47,6 +47,13 @@
 (setq leetcode-directory "~/.leetcode")
 
 ;; Tramp
+;; Fix shell prompt problem: https://www.emacswiki.org/emacs/TrampMode#h5o-9
+;; In the remote side, set PS1 to '> '.
+;; For example, put the following statement in the beginning of `.bashrc'
+;; when `bash' is the default shell.
+;; [[ $TERM == "dumb" ]] && PS='> ' && return
+;; "dumb" is the default `tramp-terminal-type', change it accordingly
+;; when you have customized this variable.
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
