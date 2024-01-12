@@ -60,8 +60,8 @@
 (google-this-mode 1)
 
 ;; reddit
-(setq md4rd-subs-active '(china china_irl chatgpt funny todayilearned worldnews memes explainlikeimfive geopolitics))
-(setq reddigg-subs '(china china_irl chatgpt funny todayilearned worldnews memes explainlikeimfive geopolitics))
+(setq md4rd-subs-active '(china china_irl chatgpt funny todayilearned worldnews memes explainlikeimfive geopolitics localllama))
+(setq reddigg-subs '(china china_irl chatgpt funny todayilearned worldnews memes explainlikeimfive geopolitics localllama))
 
 ;; browser support
 (global-set-key [f8] 'browse-url-at-point)
