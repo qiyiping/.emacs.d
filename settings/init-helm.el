@@ -49,10 +49,10 @@
 (if (eq system-type 'darwin)
     (setq helm-man-format-switches "%s"))
 
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
-
 (helm-mode 1)
+
+;; (projectile-global-mode)
+;; (setq projectile-completion-system 'helm)
+(helm-projectile-on)
 
 (provide 'init-helm)
