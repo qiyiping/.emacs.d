@@ -47,20 +47,6 @@
       (eww (concat my-lua-doc-path "#pdf-" funcname))
     (message "Cannot find function at point")))
 
-
-(use-package eglot-luau
-  :demand t
-  :after (lua-mode eglot)
-  :functions eglot-luau-setup
-  :config (eglot-luau-setup)
-  :custom
-  (eglot-luau-rojo-sourcemap-enabled t)
-  (eglot-luau-rojo-sourcemap-includes-non-scripts t)
-  (eglot-luau-auto-update-roblox-docs t)
-  (eglot-luau-auto-update-roblox-types t)
-  (eglot-luau-fflag-overrides '(("LuauNonStrictByDefaultBetaFeature" "False")))
-  :hook (lua-mode . eglot-ensure))
-
 (defun launch-love2d ()
   (interactive)
   (if-let ((project-root (and (fboundp 'projectile-project-root)
@@ -69,6 +55,10 @@
         (let ((quoted-path (shell-quote-argument (expand-file-name project-root))))
           (async-shell-command (format "cd %s && /Applications/love.app/Contents/MacOS/love ." quoted-path) "*Love2D Output*")))
     (message "Error: Projectile is missing.")))
+
+(setq lua-indent-level 4)
+
+(add-hook 'lua-mode-hook 'eglot-ensure)
 
 (provide 'init-lua)
 
