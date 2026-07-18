@@ -7,17 +7,34 @@
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (setq jedi:complete-on-dot t)
 
-;; anaconda-mode
-(add-hook 'python-mode-hook 'anaconda-mode)
-(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-(eval-after-load "company"
-  '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+;; ;; anaconda-mode
+;; (add-hook 'python-mode-hook 'anaconda-mode)
+;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+;; (eval-after-load "company"
+;;   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
 ;; language server
-(add-hook 'python-mode-hook 'eglot-ensure)
 
-;; virtualenvwrapper
-(setq venv-location "~/.virtualenvs/")
+(use-package eglot
+  :ensure t
+  :defer t
+  :hook ((python-mode . eglot-ensure)
+         (go-mode . eglot-ensure))
+  :config
+  (add-to-list 'eglot-server-programs
+               `(python-mode
+                 . ,(eglot-alternatives '(("pyright-langserver" "--stdio")
+                                          "jedi-language-server"
+                                          "pylsp")))))
+(use-package lsp-pyright
+  :ensure t
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
+
+;; ;; virtualenvwrapper
+;; (setq venv-location "~/.virtualenvs/")
 
 ;; `auto-mode-alist' for python
 (add-to-list 'auto-mode-alist '("SConstruct\\'" . python-mode))
