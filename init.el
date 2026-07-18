@@ -9,7 +9,29 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(gptel-fn-complete gptel aider eglot-luau csv-mode jupyter use-package treemacs transient eglot which-key cargo rust-mode bazel-mode google-this go-autocomplete ess leetcode helm company-quickhelp company-anaconda youdao-dictionary jedi-core hackernews cheat-sh osx-dictionary avy ace-jump-mode ag helm-ag yasnippet-snippets cmake-mode sr-speedbar markdown-toc yaml-mode helm-dash dash-at-point xkcd selectric-mode skewer-mode js2-refactor web-beautify tern-auto-complete tern js-comint js2-mode project-explorer gscholar-bibtex spaceline spacemacs-theme tldr zenburn-theme yasnippet xcscope web-mode vlf virtualenvwrapper undo-tree switch-window swiper smex slime sbt-mode rainbow-delimiters python powerline paredit org nyan-mode multi-term math-symbol-lists magit lua-mode key-chord jedi ido-ubiquitous idle-highlight-mode hydra htmlize helm-projectile helm-dictionary helm-bibtex google-c-style go-eldoc ggtags exec-path-from-shell dirtree dired+ dictionary csharp-mode color-theme-solarized cal-china-x beacon auctex anaconda-mode ace-pinyin)))
+   '(ace-pinyin ag aider auctex autopair bazel-mode beacon cal-china-x
+                cargo cheat-sh claude-code-ide cmake-mode
+                color-theme-solarized company-anaconda
+                company-quickhelp csharp-mode csv-mode dash-at-point
+                dash-functional dictionary dirtree eglot ein ess
+                exec-path-from-shell ggtags ghub go-autocomplete
+                go-eldoc google-c-style google-this gptel-fn-complete
+                graphql gscholar-bibtex hackernews helm-ag helm-bibtex
+                helm-dash helm-dictionary helm-projectile htmlize
+                idle-highlight-mode jedi js-comint js2-refactor
+                jupyter key-chord leetcode lua-mode magit-popup
+                markdown-toc math-symbol-lists multi-term nyan-mode
+                osx-dictionary paredit pkg-info project-explorer
+                rainbow-delimiters sbt-mode selectric-mode skewer-mode
+                slime smex spaceline spacemacs-theme spinner
+                sr-speedbar swiper switch-window tern-auto-complete
+                tldr track-changes treemacs undo-tree use-package
+                virtualenvwrapper vlf web-beautify web-mode which-key
+                xcscope xkcd yaml-mode yasnippet-snippets
+                youdao-dictionary zenburn-theme))
+ '(package-vc-selected-packages
+   '((claude-code-ide :url
+                      "https://github.com/manzaltu/claude-code-ide.el"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

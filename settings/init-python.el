@@ -13,8 +13,8 @@
 (eval-after-load "company"
   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
-;; ;; language server
-;; (add-hook 'python-mode-hook 'eglot-ensure)
+;; language server
+(add-hook 'python-mode-hook 'eglot-ensure)
 
 ;; virtualenvwrapper
 (setq venv-location "~/.virtualenvs/")
