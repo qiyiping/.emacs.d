@@ -69,6 +69,22 @@
 ;; browser support
 (global-set-key [f8] 'browse-url-at-point)
 
+(defun toggle-url-proxy ()
+  "Toggle HTTP and HTTPS proxying through 127.0.0.1:1087."
+  (interactive)
+  (require 'url-vars)
+  (if (or (cdr (assoc "http" url-proxy-services))
+          (cdr (assoc "https" url-proxy-services)))
+      (progn
+        ;; Explicit entries prevent environment variables from restoring proxies.
+        (setq url-proxy-services '(("http" . nil) ("https" . nil)))
+        (message "URL proxy disabled"))
+    (setq url-proxy-services
+          '(("http" . "127.0.0.1:1087")
+            ("https" . "127.0.0.1:1087")
+            ("no_proxy" . "\\`\\(localhost\\|127\\.0\\.0\\.1\\)\\'")))
+    (message "URL proxy enabled: 127.0.0.1:1087")))
+
 (defun my-set-eww-buffer-title ()
   (let* ((title  (plist-get eww-data :title))
          (url    (plist-get eww-data :url))
