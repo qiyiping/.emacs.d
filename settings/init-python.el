@@ -14,6 +14,7 @@
 ;;   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
 ;; language server
+
 (use-package eglot
   :ensure t
   :defer t
